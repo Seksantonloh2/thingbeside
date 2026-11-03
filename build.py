@@ -77,7 +77,7 @@ FOOTER = f'''<footer class="footer">
     <div class="footer__top">
       <div>
         <a class="wordmark" href="index.html">THINGBESIDE</a>
-        <p>Modern websites for Australian tradies, local businesses and individuals. Based in Brisbane, working worldwide.</p>
+        <p>AI-powered efficiency, hand-crafted design. Your new site live in weeks, ready to win customers.</p>
       </div>
       <div>
         <h4>Pages</h4>
@@ -147,7 +147,7 @@ CASES = [
 ]
 
 def case_card(slug, name, desc, tags, i):
-    return f'''        <a class="case reveal" href="https://{slug}.framer.website/" target="_blank" rel="noopener" style="--i:{i}">
+    return f'''        <a class="case reveal" href="https://{slug}.framer.website/" target="_blank" rel="noopener">
           <div class="case__media">
             <img src="assets/work-{slug}.jpg" alt="{name} website homepage" width="1600" height="940" loading="lazy">
             <span class="case__visit" aria-hidden="true">{DIAG}</span>
@@ -241,7 +241,36 @@ def accordion(static=False):
 '''
     return f'        <div class="acc reveal{" acc--static" if static else ""}">\n{items}        </div>\n'
 
+def service_card(i, s):
+    label, title, img, alt, desc, incl = s
+    return f'''        <article class="svc-card reveal">
+          <div class="svc-card__media"><img src="{U(img, 1000)}" alt="{alt}" loading="lazy"><span class="acc__count">{i:02d} / {len(SERVICES):02d}</span></div>
+          <div class="svc-card__body">
+            <span class="svc-card__label">{label}</span>
+            <h3>{title}</h3>
+            <p>{desc}</p>
+            <ul class="incl">{''.join(f'<li>{x}</li>' for x in incl)}</ul>
+          </div>
+        </article>
+'''
+
 def services_section(soft, eyebrow, h2, sub, static=False):
+    if static:
+        cards = ''.join(service_card(i, s) for i, s in enumerate(SERVICES, 1))
+        return f'''  <!-- SERVICES -->
+  <section class="section" id="services" aria-labelledby="svc-title">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">{eyebrow}</span>
+        <h2 id="svc-title" data-split data-kinetic>{h2}</h2>
+        <p class="sub reveal">{sub}</p>
+      </div>
+      <div class="svc-grid" data-stagger>
+{cards}      </div>
+    </div>
+  </section>
+
+'''
     return f'''  <!-- SERVICES -->
   <section class="section{' section--soft' if soft else ''}" id="services" aria-labelledby="svc-title">
     <div class="wrap split">
