@@ -641,4 +641,5 @@ p { margin: 0; }
 .svc-card h3 { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); letter-spacing: -0.03em; }
 .svc-card p { color: var(--text-2); max-width: 52ch; }
 .svc-card .incl { margin-top: 6px; }
+.svc-card .btn { justify-self: start; margin-top: 6px; }
 @media (max-width: 720px) { .svc-grid { grid-template-columns: 1fr; } }
