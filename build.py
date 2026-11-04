@@ -250,6 +250,7 @@ def service_card(i, s):
             <h3>{title}</h3>
             <p>{desc}</p>
             <ul class="incl">{''.join(f'<li>{x}</li>' for x in incl)}</ul>
+            {btn('Get in touch', cls='btn btn--sm')}
           </div>
         </article>
 '''
@@ -260,11 +261,6 @@ def services_section(soft, eyebrow, h2, sub, static=False):
         return f'''  <!-- SERVICES -->
   <section class="section" id="services" aria-labelledby="svc-title">
     <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">{eyebrow}</span>
-        <h2 id="svc-title" data-split data-kinetic>{h2}</h2>
-        <p class="sub reveal">{sub}</p>
-      </div>
       <div class="svc-grid" data-stagger>
 {cards}      </div>
     </div>
