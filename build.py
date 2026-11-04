@@ -121,12 +121,12 @@ def page_hero(eyebrow, h1, sub):
 '''
 
 def side_intro(eyebrow, h2, h2_id, sub, cta='Get in touch', extra=''):
+    btn_line = '' if cta is None else ('        <div class="reveal">' + btn(cta, cls='btn btn--sm') + '</div>' + chr(10))
     return f'''      <div class="side-intro">
         <span class="eyebrow">{eyebrow}</span>
         <h2 id="{h2_id}" data-split data-kinetic>{h2}</h2>
         <p class="sub reveal">{sub}</p>
-        <div class="reveal">{btn(cta, cls='btn btn--sm')}</div>
-{extra}      </div>
+{btn_line}{extra}      </div>
 '''
 
 # ---------------------------------------------------------------- work (case studies)
@@ -270,7 +270,7 @@ def services_section(soft, eyebrow, h2, sub, static=False):
     return f'''  <!-- SERVICES -->
   <section class="section{' section--soft' if soft else ''}" id="services" aria-labelledby="svc-title">
     <div class="wrap split">
-{side_intro(eyebrow, h2, 'svc-title', sub)}{accordion(static)}    </div>
+{side_intro(eyebrow, h2, 'svc-title', sub, cta=None)}{accordion(static)}    </div>
   </section>
 
 '''
