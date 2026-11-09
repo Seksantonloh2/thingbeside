@@ -3,132 +3,141 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#efeeec">
   <title>Work | THINGBESIDE Website Designer</title>
   <meta name="description" content="Concept and client website projects for Australian tradies, clinics, planners and consultancies, each designed to look sharp and bring in enquiries.">
   <meta property="og:title" content="Work | THINGBESIDE Website Designer">
   <meta property="og:description" content="Concept and client website projects for Australian tradies, clinics, planners and consultancies, each designed to look sharp and bring in enquiries.">
   <meta property="og:image" content="assets/work-voltsonelectrical.jpg">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=9">
-  <script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('tb-loaded'))document.documentElement.classList.add('no-preload')}catch(e){}</script>
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=29">
+  <script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('tb-loaded'))document.documentElement.classList.add('no-preload')}catch(e){}setTimeout(function(){var p=document.querySelector('.page');p&&p.classList.remove('entering')},5000)</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<canvas id="fluid" aria-hidden="true"></canvas>
 
 <header class="nav">
   <a class="wordmark" href="index.html" aria-label="THINGBESIDE home">THINGBESIDE</a>
-  <nav aria-label="Main"><ul class="nav__pill"><li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20h-5v-6H9v6H4z"/></svg>Home</a></li><li><a href="work.html" aria-current="page">Work</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  <nav aria-label="Main"><ul class="nav__links"><li><a href="work.html" aria-current="page">Work<sup class=nav__count>4</sup></a></li><li><a href="services.html">Services</a></li><li><a href="services.html#pricing">Pricing</a></li><li><a href="index.html#about">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
   <div class="nav__end">
-    <a class="btn btn--sm" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="btn btn--sm nav__cta" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
   </div>
 </header>
 <div class="mobile-menu" id="mobile-menu">
-  <a class="big" href="index.html">Home</a>
-  <a class="big" href="work.html" aria-current="page">Work</a>
-  <a class="big" href="services.html">Services</a>
-  <a class="big" href="contact.html">Contact</a>
-  <a class="btn" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  <nav class="mm__links" aria-label="Mobile">
+    <a class="mm__link" href="index.html">Home</a>
+    <a class="mm__link" href="work.html" aria-current="page">Work</a>
+    <a class="mm__link" href="services.html">Services</a>
+    <a class="mm__link" href="services.html#pricing">Pricing</a>
+    <a class="mm__link" href="index.html#about">About</a>
+    <a class="mm__link" href="contact.html">Contact</a>
+  </nav>
+  <div class="mm__foot">
+    <a class="btn btn--light" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+    <a href="mailto:thingbeside@gmail.com">thingbeside@gmail.com</a>
+  </div>
 </div>
 
 <div class="page entering">
+<div class="topbar"><a href="contact.html"><i class="dot" aria-hidden="true"></i><span>Taking new projects</span><span class="topbar__sep" aria-hidden="true">·</span><span class="topbar__more">Book a free 15-minute call</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
 <main id="main">
-  <section class="page-hero">
-    <div class="wrap head">
-      <span class="eyebrow reveal">Work</span>
-      <h1 data-split data-load data-kinetic>Selected work</h1>
-      <p class="sub" data-split data-load>Concept and client projects for Australian businesses, each designed to look sharp and bring in enquiries.</p>
+  <section class="phero">
+    <div class="wrap">
+      <p class="label reveal">Work</p>
+      <h1 class="display" data-split data-load>Selected <span class="pic" aria-hidden="true"><img src="assets/pic-saltmereweddings.jpg" alt="" loading="lazy"></span> work</h1>
+      <div class="phero__foot">
+        <p class="phero__sub reveal">Concept and client projects for Australian businesses, each designed to look sharp and bring in enquiries.</p>
+        <p class="phero__meta reveal"><b>04</b> projects · click any to open the live site</p>
+      </div>
     </div>
   </section>
 
-  <section class="section" style="padding-top:0" aria-label="Projects">
+  <section class="section pwork" aria-label="Projects">
     <div class="wrap">
-      <div class="cgrid">
-        <article class="wcard reveal" style="--d:0ms">
-          <a class="wcard__media" href="https://voltsonelectrical.framer.website/" target="_blank" rel="noopener">
-            <img src="assets/work-voltsonelectrical.jpg" alt="Voltson Electrical website homepage" width="1600" height="940" loading="lazy">
-            <div class="wcard__over">
-              <h3>Voltson Electrical</h3>
-              <div class="wcard__tags"><span>Electrical</span><span>Web design</span><span>Lead generation</span></div>
-            </div>
-          </a>
-          <p class="wcard__desc">Turns “electrician near me” searches into quote requests, with fixed upfront pricing and a one-tap call button.</p>
-        </article>
-        <article class="wcard reveal" style="--d:90ms">
-          <a class="wcard__media" href="https://fernmoorphysiotherapy.framer.website/" target="_blank" rel="noopener">
+      <div class="pgrid">
+        <a class="proj reveal" id="p-fernmoorphysiotherapy" href="https://fernmoor-physiotherapy.vercel.app/" target="_blank" rel="noopener" style="--c:#2B3D54;--c-ink:#F4F4F2;--d:0ms">
+          <span class="proj__media">
             <img src="assets/work-fernmoorphysiotherapy.jpg" alt="Fernmoor Physiotherapy website homepage" width="1600" height="940" loading="lazy">
-            <div class="wcard__over">
-              <h3>Fernmoor Physiotherapy</h3>
-              <div class="wcard__tags"><span>Healthcare</span><span>Bookings</span></div>
-            </div>
-          </a>
-          <p class="wcard__desc">Fills the appointment book by making same-week bookings and no-referral visits clear up front.</p>
-        </article>
-        <article class="wcard reveal" style="--d:0ms">
-          <a class="wcard__media" href="https://saltmereweddings.framer.website/" target="_blank" rel="noopener">
+            <span class="proj__hover" aria-hidden="true"><span class="proj__hl">Fills the appointment book by making same-week bookings and no-referral visits clear up front.</span><span class="proj__brand">Fernmoor Physiotherapy</span></span>
+            <span class="proj__search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>physio no referral</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+            <span class="proj__cursor" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </span>
+          <span class="proj__meta"><span class="proj__name">Fernmoor Physiotherapy</span><span class="proj__tags"><span>Healthcare</span><span>Bookings</span></span></span><span class="proj__desc">Fills the appointment book by making same-week bookings and no-referral visits clear up front.</span>
+          <span class="sr-only">(opens the live Fernmoor Physiotherapy site in a new tab)</span>
+        </a>
+        <a class="proj reveal" id="p-umbra" href="https://umbra-architecture.vercel.app/" target="_blank" rel="noopener" style="--c:#EB9843;--c-ink:#111212;--d:90ms">
+          <span class="proj__media">
+            <img src="assets/work-umbra.jpg" alt="Umbra Architecture website homepage" width="1600" height="940" loading="lazy">
+            <span class="proj__hover" aria-hidden="true"><span class="proj__hl">Puts a small architecture studio’s work up front, with a rough timeline before the first call.</span><span class="proj__brand">Umbra Architecture</span></span>
+            <span class="proj__search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>residential architect</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+            <span class="proj__cursor" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </span>
+          <span class="proj__meta"><span class="proj__name">Umbra Architecture</span><span class="proj__tags"><span>Architecture</span><span>Residential</span><span>Brief form</span></span></span><span class="proj__desc">Puts a small architecture studio’s work up front, with a rough timeline before the first call.</span>
+          <span class="sr-only">(opens the live Umbra Architecture site in a new tab)</span>
+        </a>
+        <a class="proj reveal" id="p-voltsonelectrical" href="https://voltson-electrical.vercel.app/" target="_blank" rel="noopener" style="--c:#FFD23F;--c-ink:#111212;--d:0ms">
+          <span class="proj__media">
+            <img src="assets/work-voltsonelectrical.jpg" alt="Voltson Electrical website homepage" width="1600" height="940" loading="lazy">
+            <span class="proj__hover" aria-hidden="true"><span class="proj__hl">Turns “electrician near me” searches into quote requests, with fixed upfront pricing and a one-tap call button.</span><span class="proj__brand">Voltson Electrical</span></span>
+            <span class="proj__search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>electrician near me</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+            <span class="proj__cursor" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </span>
+          <span class="proj__meta"><span class="proj__name">Voltson Electrical</span><span class="proj__tags"><span>Electrical</span><span>Web design</span><span>Lead generation</span></span></span><span class="proj__desc">Turns “electrician near me” searches into quote requests, with fixed upfront pricing and a one-tap call button.</span>
+          <span class="sr-only">(opens the live Voltson Electrical site in a new tab)</span>
+        </a>
+        <a class="proj reveal" id="p-saltmereweddings" href="https://saltmere-weddings.vercel.app/" target="_blank" rel="noopener" style="--c:#683526;--c-ink:#F4F4F2;--d:90ms">
+          <span class="proj__media">
             <img src="assets/work-saltmereweddings.jpg" alt="Saltmere Weddings website homepage" width="1600" height="940" loading="lazy">
-            <div class="wcard__over">
-              <h3>Saltmere Weddings</h3>
-              <div class="wcard__tags"><span>Weddings</span><span>Packages</span></div>
-            </div>
-          </a>
-          <p class="wcard__desc">Helps couples picture the day, compare packages and check their date in a couple of taps.</p>
-        </article>
-        <article class="wcard reveal" style="--d:90ms">
-          <a class="wcard__media" href="https://northbridgeconsulting.framer.website/" target="_blank" rel="noopener">
-            <img src="assets/work-northbridgeconsulting.jpg" alt="Northbridge Consulting website homepage" width="1600" height="940" loading="lazy">
-            <div class="wcard__over">
-              <h3>Northbridge Consulting</h3>
-              <div class="wcard__tags"><span>Consulting</span><span>Strategy</span></div>
-            </div>
-          </a>
-          <p class="wcard__desc">Wins enquiries from leadership teams with clear results, proof in numbers and one booking path.</p>
-        </article>
+            <span class="proj__hover" aria-hidden="true"><span class="proj__hl">Helps couples picture the day, compare packages and check their date in a couple of taps.</span><span class="proj__brand">Saltmere Weddings</span></span>
+            <span class="proj__search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>wedding planner brisbane</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+            <span class="proj__cursor" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </span>
+          <span class="proj__meta"><span class="proj__name">Saltmere Weddings</span><span class="proj__tags"><span>Weddings</span><span>Packages</span></span></span><span class="proj__desc">Helps couples picture the day, compare packages and check their date in a couple of taps.</span>
+          <span class="sr-only">(opens the live Saltmere Weddings site in a new tab)</span>
+        </a>
       </div>
-      <p class="note reveal">Every project here is labelled honestly. Concept projects show how I approach a real business problem, built to the same standard as paid client work. Click any project to open the live site.</p>
+      <p class="note reveal">Every project here is labelled honestly. Concept projects show how I approach a real business problem, built to the same standard as paid client work.</p>
     </div>
   </section>
 
   <!-- FINAL CTA -->
-  <section class="cta" aria-labelledby="cta-title">
-    <div class="cta__card">
-      <div class="cta__glow" aria-hidden="true"></div>
-      <h2 id="cta-title" data-split data-kinetic>Ready for a website that works?</h2>
-      <p class="sub reveal">Book a free 15-minute call. Tell me about your business, and I’ll tell you how I’d build your site.</p>
-      <div class="reveal"><a class="btn" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  <section class="outro" aria-labelledby="cta-title">
+    <h2 id="cta-title" class="outro__line" data-wave>Ready for a website that works?</h2>
+    <div class="wrap outro__foot">
+      <p class="outro__sub reveal">Book a free 15-minute call. Tell me about your business, and I’ll tell you how I’d build your site.</p>
+      <div class="reveal"><a class="btn" href="contact.html"><span class="btn__label"><span>Book a free call</span><span aria-hidden="true">Book a free call</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <div class="wrap">
+  <div class="footer__panel">
     <div class="footer__top">
-      <div>
-        <a class="wordmark" href="index.html">THINGBESIDE</a>
-        <p>AI-powered efficiency, hand-crafted design. Your new site live in weeks, ready to win customers.</p>
+      <div class="footer__lead">
+        <h2 class="footer__title">Start with a free <span class="nowrap">15-minute</span> call</h2>
+        <a class="footer__mail" href="mailto:thingbeside@gmail.com"><span>thingbeside@gmail.com</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+        <p class="footer__small">Replies within 24 hours. Based in Brisbane, working with Australia &amp; worldwide.</p>
       </div>
-      <div>
-        <h4>Pages</h4>
+      <nav class="footer__cols" aria-label="Footer">
         <ul><li><a href="index.html">Home</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul><li><a href="mailto:thingbeside@gmail.com">thingbeside@gmail.com</a></li><li><a href="contact.html">Book a free call</a></li><li>Brisbane, QLD</li></ul>
-      </div>
+        <ul><li><a href="index.html#work">Featured work</a></li><li><a href="index.html#process">Process</a></li><li><a href="services.html#pricing">Pricing</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#faq">FAQ</a></li></ul>
+        <ul><li><a href="mailto:thingbeside@gmail.com">Email me</a></li><li><a href="contact.html">Book a free call</a></li><li><a href="privacy.html">Privacy policy</a></li></ul>
+      </nav>
     </div>
     <div class="footer__mark" aria-hidden="true"><span>THINGBESIDE</span></div>
     <div class="footer__legal">
       <span>© <span data-year>2026</span> THINGBESIDE · ABN 00 000 000 000</span>
-      <a href="privacy.html">Privacy policy</a>
+      <span>Designed by hand in Brisbane, QLD</span>
     </div>
   </div>
 </footer>
 </div>
 
-<script src="assets/main.js?v=9"></script>
+<script src="assets/main.js?v=29"></script>
 </body>
 </html>

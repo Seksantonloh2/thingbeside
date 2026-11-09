@@ -3,51 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#efeeec">
   <title>Contact | Book a Free Website Call | THINGBESIDE</title>
   <meta name="description" content="Get in touch about your new website. Send a quick message or book a free 15-minute call with Seksan, a Brisbane-based website designer.">
   <meta property="og:title" content="Contact | Book a Free Website Call | THINGBESIDE">
   <meta property="og:description" content="Get in touch about your new website. Send a quick message or book a free 15-minute call with Seksan, a Brisbane-based website designer.">
   <meta property="og:image" content="assets/work-voltsonelectrical.jpg">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=9">
-  <script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('tb-loaded'))document.documentElement.classList.add('no-preload')}catch(e){}</script>
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=29">
+  <script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('tb-loaded'))document.documentElement.classList.add('no-preload')}catch(e){}setTimeout(function(){var p=document.querySelector('.page');p&&p.classList.remove('entering')},5000)</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<canvas id="fluid" aria-hidden="true"></canvas>
 
 <header class="nav">
   <a class="wordmark" href="index.html" aria-label="THINGBESIDE home">THINGBESIDE</a>
-  <nav aria-label="Main"><ul class="nav__pill"><li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20h-5v-6H9v6H4z"/></svg>Home</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav>
+  <nav aria-label="Main"><ul class="nav__links"><li><a href="work.html">Work<sup class=nav__count>4</sup></a></li><li><a href="services.html">Services</a></li><li><a href="services.html#pricing">Pricing</a></li><li><a href="index.html#about">About</a></li><li><a href="contact.html" aria-current="page">Contact</a></li></ul></nav>
   <div class="nav__end">
-    <a class="btn btn--sm" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="btn btn--sm nav__cta" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
   </div>
 </header>
 <div class="mobile-menu" id="mobile-menu">
-  <a class="big" href="index.html">Home</a>
-  <a class="big" href="work.html">Work</a>
-  <a class="big" href="services.html">Services</a>
-  <a class="big" href="contact.html" aria-current="page">Contact</a>
-  <a class="btn" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  <nav class="mm__links" aria-label="Mobile">
+    <a class="mm__link" href="index.html">Home</a>
+    <a class="mm__link" href="work.html">Work</a>
+    <a class="mm__link" href="services.html">Services</a>
+    <a class="mm__link" href="services.html#pricing">Pricing</a>
+    <a class="mm__link" href="index.html#about">About</a>
+    <a class="mm__link" href="contact.html" aria-current="page">Contact</a>
+  </nav>
+  <div class="mm__foot">
+    <a class="btn btn--light" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+    <a href="mailto:thingbeside@gmail.com">thingbeside@gmail.com</a>
+  </div>
 </div>
 
 <div class="page entering">
+<div class="topbar"><a href="contact.html"><i class="dot" aria-hidden="true"></i><span>Taking new projects</span><span class="topbar__sep" aria-hidden="true">·</span><span class="topbar__more">Book a free 15-minute call</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
 <main id="main">
-  <section class="page-hero">
-    <div class="wrap head">
-      <span class="eyebrow reveal">Contact</span>
-      <h1 data-split data-load data-kinetic>Let’s build your website.</h1>
-      <p class="sub" data-split data-load>Tell me a little about your business and what you need. I’ll reply within 24 hours with next steps.</p>
+  <section class="phero">
+    <div class="wrap">
+      <p class="label reveal">Contact</p>
+      <h1 class="display" data-split data-load>Let’s build <span class="pic" aria-hidden="true"><img src="assets/pic-voltsonelectrical.jpg" alt="" loading="lazy"></span> your website</h1>
+      <div class="phero__foot">
+        <p class="phero__sub reveal">Tell me a little about your business and what you need. I’ll reply within 24 hours with next steps.</p>
+      </div>
     </div>
   </section>
 
-  <section class="section" style="padding-top:0" aria-label="Get in touch">
+  <section class="section contact-sec" aria-label="Get in touch">
     <div class="wrap contact">
       <form class="form reveal" id="quote-form" action="https://formspree.io/f/mvkkdgyn" method="POST" novalidate>
+        <h2 class="form__title">Tell me about your project</h2>
         <div class="form__row">
           <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required><span class="err">Please enter your name.</span></div>
           <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required><span class="err">Please enter a valid email address.</span></div>
@@ -63,18 +75,18 @@
             <option>Not sure yet</option>
           </select><span class="err">Please choose an option.</span></div>
         <div class="field"><label for="f-msg">Tell me about your business</label><textarea id="f-msg" name="message" required placeholder="What you do, where you work and what you want your website to do."></textarea><span class="err">A sentence or two helps me prepare (10+ characters).</span></div>
-        <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between">
-          <button class="btn" type="submit"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
+        <div class="form__foot">
+          <button class="btn" type="submit"><span class="btn__label"><span>Send message</span><span aria-hidden="true">Send message</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></button>
           <p class="form__ok" role="status">Thanks! Your message is in. I’ll be in touch within 24 hours.</p>
           <p class="form__err" role="alert">Something went wrong. Please try again, or email thingbeside@gmail.com.</p>
         </div>
       </form>
       <aside class="side">
-        <div class="side-card side-card--glow reveal">
-          <span class="status">Taking new projects</span>
+        <div class="side-card side-card--dark reveal">
+          <span class="status"><i class="dot" aria-hidden="true"></i>Taking new projects</span>
           <h3>Book a free 15-minute call</h3>
           <p>A no-pressure chat about your business and your website. If we’re a good fit, you’ll get a fixed quote and timeline.</p>
-          <a class="btn btn--sm" href="mailto:thingbeside@gmail.com?subject=Free%2015-minute%20call"><span class="btn__label"><span>Book a free call</span><span aria-hidden="true">Book a free call</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+          <a class="btn btn--light btn--sm" href="mailto:thingbeside@gmail.com?subject=Free%2015-minute%20call"><span class="btn__label"><span>Book a free call</span><span aria-hidden="true">Book a free call</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
         </div>
         <div class="side-card reveal">
           <dl class="dl">
@@ -89,30 +101,33 @@
   </section>
 
   <!-- FAQ -->
-  <section class="section section--soft" id="faq" aria-labelledby="faq-title">
+  <section class="section faq-sec" id="faq" aria-labelledby="faq-title">
     <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">FAQ</span>
-        <h2 id="faq-title" data-split data-kinetic>Questions? Answered.</h2>
-        <p class="sub reveal">Everything you might want to know before we start. Can’t find your answer? Just ask.</p>
+      <div class="sec-head">
+        <h2 id="faq-title" class="h-xl" data-split>Questions? Answered.</h2>
+        <div class="reveal"><a class="btn btn--white btn--sm" href="contact.html"><span class="btn__label"><span>Ask me anything</span><span aria-hidden="true">Ask me anything</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
       </div>
-      <div class="faq reveal">
-          <div class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="fa1">What platform do you build websites on?<span class="faq__icon" aria-hidden="true"></span></button>
-            <div class="faq__a" id="fa1" role="region"><div><p>I build every website in Framer, a modern website builder trusted by startups and design studios worldwide. It gives you a fast, secure and great-looking site with smooth animations, and it’s easy for you to edit after launch.</p></div></div>
-          </div>
-          <div class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="fa2">Do you use AI to make my website? Will it look generic?<span class="faq__icon" aria-hidden="true"></span></button>
-            <div class="faq__a" id="fa2" role="region"><div><p>AI helps me with the repetitive parts, like layout drafts and first-pass copy, so I work faster. Every site is then designed and built by me in Framer, with each detail refined by hand. Your site is built around your business, not a template.</p></div></div>
-          </div>
-          <div class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="fa3">Do I need my own domain and hosting?<span class="faq__icon" aria-hidden="true"></span></button>
-            <div class="faq__a" id="fa3" role="region"><div><p>If you already have a domain, we’ll connect it to your Framer site. If not, I’ll help you set one up. Hosting is through Framer, so your site loads fast, stays secure and needs no technical setup from you.</p></div></div>
-          </div>
-          <div class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="fa4">Can I update the website myself?<span class="faq__icon" aria-hidden="true"></span></button>
-            <div class="faq__a" id="fa4" role="region"><div><p>Yes. Framer has a simple visual editor, so you can change text, images and blog posts without touching any code. I’ll show you how at handover, or you can leave updates to me with a care plan.</p></div></div>
-          </div>
+      <div class="faq">
+        <div class="faq__item">
+          <h3><button class="faq__q" aria-expanded="false" aria-controls="fa1">What platform do you build websites on?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="fa1" role="region"><div><p>I build every website in Framer, a modern website builder trusted by startups and design studios worldwide. It gives you a fast, secure and great-looking site with smooth animations, and it’s easy for you to edit after launch.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button class="faq__q" aria-expanded="false" aria-controls="fa2">Do you use AI to make my website? Will it look generic?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="fa2" role="region"><div><p>AI helps me with the repetitive parts, like layout drafts and first-pass copy, so I work faster. Every site is then designed and built by me in Framer, with each detail refined by hand. Your site is built around your business, not a template.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button class="faq__q" aria-expanded="false" aria-controls="fa3">Do I need my own domain and hosting?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="fa3" role="region"><div><p>If you already have a domain, we’ll connect it to your Framer site. If not, I’ll help you set one up. Hosting is through Framer, so your site loads fast, stays secure and needs no technical setup from you.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button class="faq__q" aria-expanded="false" aria-controls="fa4">Can I update the website myself?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="fa4" role="region"><div><p>Yes. Framer has a simple visual editor, so you can change text, images and blog posts without touching any code. I’ll show you how at handover, or you can leave updates to me.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button class="faq__q" aria-expanded="false" aria-controls="fa5">How long does a website take?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="fa5" role="region"><div><p>A one-page site is usually live within a week. A 5–10 page business website takes about three weeks from the first call to launch, depending on how quickly we get your content together.</p></div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -120,30 +135,28 @@
 </main>
 
 <footer class="footer">
-  <div class="wrap">
+  <div class="footer__panel">
     <div class="footer__top">
-      <div>
-        <a class="wordmark" href="index.html">THINGBESIDE</a>
-        <p>AI-powered efficiency, hand-crafted design. Your new site live in weeks, ready to win customers.</p>
+      <div class="footer__lead">
+        <h2 class="footer__title">Start with a free <span class="nowrap">15-minute</span> call</h2>
+        <a class="footer__mail" href="mailto:thingbeside@gmail.com"><span>thingbeside@gmail.com</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+        <p class="footer__small">Replies within 24 hours. Based in Brisbane, working with Australia &amp; worldwide.</p>
       </div>
-      <div>
-        <h4>Pages</h4>
+      <nav class="footer__cols" aria-label="Footer">
         <ul><li><a href="index.html">Home</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul><li><a href="mailto:thingbeside@gmail.com">thingbeside@gmail.com</a></li><li><a href="contact.html">Book a free call</a></li><li>Brisbane, QLD</li></ul>
-      </div>
+        <ul><li><a href="index.html#work">Featured work</a></li><li><a href="index.html#process">Process</a></li><li><a href="services.html#pricing">Pricing</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#faq">FAQ</a></li></ul>
+        <ul><li><a href="mailto:thingbeside@gmail.com">Email me</a></li><li><a href="contact.html">Book a free call</a></li><li><a href="privacy.html">Privacy policy</a></li></ul>
+      </nav>
     </div>
     <div class="footer__mark" aria-hidden="true"><span>THINGBESIDE</span></div>
     <div class="footer__legal">
       <span>© <span data-year>2026</span> THINGBESIDE · ABN 00 000 000 000</span>
-      <a href="privacy.html">Privacy policy</a>
+      <span>Designed by hand in Brisbane, QLD</span>
     </div>
   </div>
 </footer>
 </div>
 
-<script src="assets/main.js?v=9"></script>
+<script src="assets/main.js?v=29"></script>
 </body>
 </html>

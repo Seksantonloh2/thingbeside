@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#efeeec">
   <title>THINGBESIDE | Website Designer in Brisbane</title>
   <meta name="description" content="Modern, mobile-first websites for Australian tradies and local businesses. Designed by hand, built in Framer, live in weeks. Book a free 15-minute call.">
   <meta property="og:title" content="THINGBESIDE | Website Designer in Brisbane">
   <meta property="og:description" content="Modern, mobile-first websites for Australian tradies and local businesses. Designed by hand, built in Framer, live in weeks. Book a free 15-minute call.">
   <meta property="og:image" content="assets/work-voltsonelectrical.jpg">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=9">
-  <script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('tb-loaded'))document.documentElement.classList.add('no-preload')}catch(e){}</script>
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=29">
+  <script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('tb-loaded'))document.documentElement.classList.add('no-preload')}catch(e){}setTimeout(function(){var p=document.querySelector('.page');p&&p.classList.remove('entering')},5000)</script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"THINGBESIDE","description":"Website design and Framer development for Australian small businesses.","founder":{"@type":"Person","name":"Seksan Tonloh"},"areaServed":["Brisbane","Australia","Worldwide"],"address":{"@type":"PostalAddress","addressLocality":"Brisbane","addressRegion":"QLD","addressCountry":"AU"},"email":"thingbeside@gmail.com","priceRange":"From AUD 590"}
   </script>
@@ -24,91 +26,128 @@
   <div class="preloader__count">000</div>
 </div>
 <a class="skip" href="#main">Skip to content</a>
-<canvas id="fluid" aria-hidden="true"></canvas>
 
-<header class="nav">
+<header class="nav nav--over-dark">
   <a class="wordmark" href="index.html" aria-label="THINGBESIDE home">THINGBESIDE</a>
-  <nav aria-label="Main"><ul class="nav__pill"><li><a href="index.html" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20h-5v-6H9v6H4z"/></svg>Home</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  <nav aria-label="Main"><ul class="nav__links"><li><a href="work.html">Work<sup class=nav__count>4</sup></a></li><li><a href="services.html">Services</a></li><li><a href="services.html#pricing">Pricing</a></li><li><a href="index.html#about">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
   <div class="nav__end">
-    <a class="btn btn--sm" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="btn btn--sm nav__cta" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
   </div>
 </header>
 <div class="mobile-menu" id="mobile-menu">
-  <a class="big" href="index.html" aria-current="page">Home</a>
-  <a class="big" href="work.html">Work</a>
-  <a class="big" href="services.html">Services</a>
-  <a class="big" href="contact.html">Contact</a>
-  <a class="btn" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  <nav class="mm__links" aria-label="Mobile">
+    <a class="mm__link" href="index.html" aria-current="page">Home</a>
+    <a class="mm__link" href="work.html">Work</a>
+    <a class="mm__link" href="services.html">Services</a>
+    <a class="mm__link" href="services.html#pricing">Pricing</a>
+    <a class="mm__link" href="index.html#about">About</a>
+    <a class="mm__link" href="contact.html">Contact</a>
+  </nav>
+  <div class="mm__foot">
+    <a class="btn btn--light" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+    <a href="mailto:thingbeside@gmail.com">thingbeside@gmail.com</a>
+  </div>
 </div>
 
 <div class="page entering">
+<div class="topbar"><a href="contact.html"><i class="dot" aria-hidden="true"></i><span>Taking new projects</span><span class="topbar__sep" aria-hidden="true">·</span><span class="topbar__more">Book a free 15-minute call</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
 <main id="main">
   <!-- HERO -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero__card">
-      <div class="hero__glow" aria-hidden="true"></div>
-      <div class="hero__media">
-        <img src="assets/hero-vr.webp" alt="Person wearing a white VR headset, looking up" width="1354" height="835" fetchpriority="high">
-      </div>
       <div class="hero__content">
-        <p class="eyebrow reveal">Web design studio · Brisbane &amp; worldwide</p>
-        <h1 id="hero-title" data-split data-load data-kinetic>Modern websites, built in days, <span class="grad-text">not months.</span></h1>
-        <p class="sub" data-split data-load>AI-powered efficiency, hand-crafted design. Your new site live in weeks, ready to win customers.</p>
-        <p class="hero__tag reveal" style="--d:500ms">Custom design · Mobile-first · Built in Framer</p>
-        <div class="hero__cta reveal" style="--d:650ms">
-          <a class="btn" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-          <a class="btn btn--ghost" href="work.html"><span class="btn__label"><span>See my work</span><span aria-hidden="true">See my work</span></span></a>
+        <p class="hero__eyebrow reveal">Web design studio · Brisbane &amp; worldwide</p>
+        <h1 id="hero-title" class="display" data-split data-load>Modern websites, <br>built in <span class="pic pic--rotate" aria-hidden="true"><img src="assets/pic-fernmoorphysiotherapy.jpg" alt=""><img src="assets/pic-umbra.jpg" alt=""><img src="assets/pic-voltsonelectrical.jpg" alt=""><img src="assets/pic-saltmereweddings.jpg" alt=""></span> days</h1>
+        <p class="hero__pitch reveal">Custom websites <b>designed by hand</b> and sped up with AI, so you win customers sooner.</p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--light" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+          <a class="btn btn--ghost-light" href="work.html"><span class="btn__label"><span>See my work</span><span aria-hidden="true">See my work</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
         </div>
       </div>
-      <div class="hero__scroll" aria-hidden="true"><i></i>Scroll</div>
     </div>
   </section>
 
-  <!-- WORK -->
-  <section class="section" id="work" aria-labelledby="work-title">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">Work</span>
-        <h2 id="work-title" data-split data-kinetic>Selected work</h2>
-        <p class="sub reveal">Concept and client projects for Australian businesses, each designed to look sharp and bring in enquiries.</p>
-        <div class="reveal"><a class="link-arrow" href="work.html">View all work <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+  <!-- WHO IT'S FOR -->
+  <section class="trades" aria-label="Who I build websites for">
+    <p class="trades__label">Built for</p>
+    <div class="trades__marquee">
+      <ul class="trades__track"><li>Electricians</li><li>Plumbers</li><li>Builders</li><li>Physios</li><li>Cafés</li><li>Wedding planners</li><li>Consultants</li><li>Landscapers</li><li>Cleaners</li><li>Clinics</li></ul>
+      <ul class="trades__track" aria-hidden="true"><li>Electricians</li><li>Plumbers</li><li>Builders</li><li>Physios</li><li>Cafés</li><li>Wedding planners</li><li>Consultants</li><li>Landscapers</li><li>Cleaners</li><li>Clinics</li></ul>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section intro" aria-labelledby="intro-title">
+    <div class="wrap intro__grid">
+      <p class="intro__lead reveal">One designer, start to finish. I design and build modern, high-performing websites that help Australian businesses stand out and turn visitors into customers.</p>
+      <div class="intro__main">
+        <h2 id="intro-title" class="h-lg" data-split>Designed by hand, built to <span class="pic" aria-hidden="true"><img src="assets/pic-voltsonelectrical.jpg" alt="" loading="lazy"></span> convert</h2>
+        <div class="intro__cta reveal">
+          <a class="btn btn--white btn--sm" href="index.html#about"><span class="btn__label"><span>My story</span><span aria-hidden="true">My story</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+          <a class="btn btn--text btn--sm" href="services.html"><span class="btn__label"><span>My services</span><span aria-hidden="true">My services</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        </div>
       </div>
-      <div class="stack">
-        <a class="case reveal" href="https://voltsonelectrical.framer.website/" target="_blank" rel="noopener">
-          <div class="case__media">
-            <img src="assets/work-voltsonelectrical.jpg" alt="Voltson Electrical website homepage" width="1600" height="940" loading="lazy">
-            <span class="case__visit" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-          </div>
-          <div class="case__info">
-            <span class="case__tag">Concept project</span>
-            <h3 class="case__title">Voltson Electrical</h3>
-            <p class="case__sub">Turns “electrician near me” searches into quote requests, with fixed upfront pricing and a one-tap call button.</p>
-          </div>
-          <span class="sr-only">(opens the live Voltson Electrical site in a new tab)</span>
-        </a>
-        <a class="case reveal" href="https://fernmoorphysiotherapy.framer.website/" target="_blank" rel="noopener">
-          <div class="case__media">
+    </div>
+    <div class="wrap stats" data-stagger>
+      <div class="stat"><b><span data-count="3">0</span> weeks</b><span>Typical time from first call to launch</span></div><div class="stat"><b>$<span data-count="590">0</span></b><span>Starting price in AUD, fixed quote</span></div><div class="stat"><b><span data-count="14">0</span> days</b><span>Free support after your site goes live</span></div><div class="stat"><b><span data-count="24">0</span> hrs</b><span>Reply time on every enquiry</span></div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK -->
+  <section class="work-sec" id="work" aria-labelledby="work-title">
+    <div class="panel work" data-work>
+      <div class="work__side">
+        <h2 id="work-title" class="label">Featured work</h2>
+        <div class="work__wheel">
+          <ol class="work__list">
+            <li><a href="#p-fernmoorphysiotherapy"><small>(Healthcare)</small><span>Fernmoor Physiotherapy</span></a></li>
+            <li><a href="#p-umbra"><small>(Architecture)</small><span>Umbra Architecture</span></a></li>
+            <li><a href="#p-voltsonelectrical"><small>(Electrical)</small><span>Voltson Electrical</span></a></li>
+            <li><a href="#p-saltmereweddings"><small>(Weddings)</small><span>Saltmere Weddings</span></a></li>
+          </ol>
+        </div>
+        <a class="btn btn--light btn--sm" href="work.html"><span class="btn__label"><span>Explore all work</span><span aria-hidden="true">Explore all work</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+      </div>
+      <div class="work__cards">
+        <a class="proj reveal" id="p-fernmoorphysiotherapy" href="https://fernmoor-physiotherapy.vercel.app/" target="_blank" rel="noopener" style="--c:#2B3D54;--c-ink:#F4F4F2;--d:0ms">
+          <span class="proj__media">
             <img src="assets/work-fernmoorphysiotherapy.jpg" alt="Fernmoor Physiotherapy website homepage" width="1600" height="940" loading="lazy">
-            <span class="case__visit" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-          </div>
-          <div class="case__info">
-            <span class="case__tag">Concept project</span>
-            <h3 class="case__title">Fernmoor Physiotherapy</h3>
-            <p class="case__sub">Fills the appointment book by making same-week bookings and no-referral visits clear up front.</p>
-          </div>
+            <span class="proj__hover" aria-hidden="true"><span class="proj__hl">Fills the appointment book by making same-week bookings and no-referral visits clear up front.</span><span class="proj__brand">Fernmoor Physiotherapy</span></span>
+            <span class="proj__search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>physio no referral</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+            <span class="proj__cursor" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </span>
+          <span class="proj__meta"><span class="proj__name">Fernmoor Physiotherapy</span><span class="proj__tags"><span>Healthcare</span><span>Bookings</span></span></span>
           <span class="sr-only">(opens the live Fernmoor Physiotherapy site in a new tab)</span>
         </a>
-        <a class="case reveal" href="https://saltmereweddings.framer.website/" target="_blank" rel="noopener">
-          <div class="case__media">
+        <a class="proj reveal" id="p-umbra" href="https://umbra-architecture.vercel.app/" target="_blank" rel="noopener" style="--c:#EB9843;--c-ink:#111212;--d:0ms">
+          <span class="proj__media">
+            <img src="assets/work-umbra.jpg" alt="Umbra Architecture website homepage" width="1600" height="940" loading="lazy">
+            <span class="proj__hover" aria-hidden="true"><span class="proj__hl">Puts a small architecture studio’s work up front, with a rough timeline before the first call.</span><span class="proj__brand">Umbra Architecture</span></span>
+            <span class="proj__search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>residential architect</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+            <span class="proj__cursor" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </span>
+          <span class="proj__meta"><span class="proj__name">Umbra Architecture</span><span class="proj__tags"><span>Architecture</span><span>Residential</span><span>Brief form</span></span></span>
+          <span class="sr-only">(opens the live Umbra Architecture site in a new tab)</span>
+        </a>
+        <a class="proj reveal" id="p-voltsonelectrical" href="https://voltson-electrical.vercel.app/" target="_blank" rel="noopener" style="--c:#FFD23F;--c-ink:#111212;--d:0ms">
+          <span class="proj__media">
+            <img src="assets/work-voltsonelectrical.jpg" alt="Voltson Electrical website homepage" width="1600" height="940" loading="lazy">
+            <span class="proj__hover" aria-hidden="true"><span class="proj__hl">Turns “electrician near me” searches into quote requests, with fixed upfront pricing and a one-tap call button.</span><span class="proj__brand">Voltson Electrical</span></span>
+            <span class="proj__search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>electrician near me</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+            <span class="proj__cursor" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </span>
+          <span class="proj__meta"><span class="proj__name">Voltson Electrical</span><span class="proj__tags"><span>Electrical</span><span>Web design</span><span>Lead generation</span></span></span>
+          <span class="sr-only">(opens the live Voltson Electrical site in a new tab)</span>
+        </a>
+        <a class="proj reveal" id="p-saltmereweddings" href="https://saltmere-weddings.vercel.app/" target="_blank" rel="noopener" style="--c:#683526;--c-ink:#F4F4F2;--d:0ms">
+          <span class="proj__media">
             <img src="assets/work-saltmereweddings.jpg" alt="Saltmere Weddings website homepage" width="1600" height="940" loading="lazy">
-            <span class="case__visit" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-          </div>
-          <div class="case__info">
-            <span class="case__tag">Concept project</span>
-            <h3 class="case__title">Saltmere Weddings</h3>
-            <p class="case__sub">Helps couples picture the day, compare packages and check their date in a couple of taps.</p>
-          </div>
+            <span class="proj__hover" aria-hidden="true"><span class="proj__hl">Helps couples picture the day, compare packages and check their date in a couple of taps.</span><span class="proj__brand">Saltmere Weddings</span></span>
+            <span class="proj__search" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg><span>wedding planner brisbane</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 17 6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+            <span class="proj__cursor" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+          </span>
+          <span class="proj__meta"><span class="proj__name">Saltmere Weddings</span><span class="proj__tags"><span>Weddings</span><span>Packages</span></span></span>
           <span class="sr-only">(opens the live Saltmere Weddings site in a new tab)</span>
         </a>
       </div>
@@ -116,181 +155,136 @@
   </section>
 
   <!-- SERVICES -->
-  <section class="section section--soft" id="services" aria-labelledby="svc-title">
-    <div class="wrap split">
-      <div class="side-intro">
-        <span class="eyebrow">Services</span>
-        <h2 id="svc-title" data-split data-kinetic>Everything you need to get online properly.</h2>
-        <p class="sub reveal">From design to launch, I handle your whole website so you can get back to running your business.</p>
+  <section class="section svc" id="services" aria-labelledby="svc-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 id="svc-title" class="h-xl" data-split>My <span class="pic" aria-hidden="true"><img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=300&q=80" alt="" loading="lazy"></span> services</h2>
+        <div class="reveal"><a class="btn btn--white btn--sm" href="services.html"><span class="btn__label"><span>All services</span><span aria-hidden="true">All services</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
       </div>
-        <div class="acc reveal">
-          <div class="acc__item open">
-            <button class="acc__head" aria-expanded="true" aria-controls="acc-1"><span class="acc__label">Design</span><span class="acc__toggle" aria-hidden="true"></span></button>
-            <div class="acc__panel" id="acc-1" role="region"><div>
-              <div class="acc__body">
-                <div class="acc__text">
-                  <h3>Website design</h3>
-                  <p>A custom design built around your business and your customers. You see the homepage first, then we roll the look across every page.</p>
-                  <ul class="incl"><li>Homepage-first, so you see the direction early</li><li>Copy written or polished for you</li><li>2 rounds of revisions included</li></ul>
-                  <a class="btn btn--sm" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                </div>
-                <div class="acc__img"><img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1000&q=80" alt="Designer sketching website wireframes on a tablet" loading="lazy"><span class="acc__count">01 / 04</span></div>
-              </div>
-            </div></div>
-          </div>
-          <div class="acc__item">
-            <button class="acc__head" aria-expanded="false" aria-controls="acc-2"><span class="acc__label">Development</span><span class="acc__toggle" aria-hidden="true"></span></button>
-            <div class="acc__panel" id="acc-2" role="region"><div>
-              <div class="acc__body">
-                <div class="acc__text">
-                  <h3>Framer development</h3>
-                  <p>Fast, secure and smooth to use, with animations that make you look established on every screen size.</p>
-                  <ul class="incl"><li>Mobile-first, responsive layouts</li><li>Forms that land in your inbox</li><li>A private preview link before launch</li></ul>
-                  <a class="btn btn--sm" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                </div>
-                <div class="acc__img"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=80" alt="Website layout being designed on a large monitor" loading="lazy"><span class="acc__count">02 / 04</span></div>
-              </div>
-            </div></div>
-          </div>
-          <div class="acc__item">
-            <button class="acc__head" aria-expanded="false" aria-controls="acc-3"><span class="acc__label">Launch &amp; SEO</span><span class="acc__toggle" aria-hidden="true"></span></button>
-            <div class="acc__panel" id="acc-3" role="region"><div>
-              <div class="acc__body">
-                <div class="acc__text">
-                  <h3>Launch and SEO basics</h3>
-                  <p>Your site goes live properly set up, so Google can find it and customers searching in your area can find you.</p>
-                  <ul class="incl"><li>Domain connected and site published</li><li>Titles and descriptions on every page</li><li>Speed, alt text and accessibility checks</li></ul>
-                  <a class="btn btn--sm" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                </div>
-                <div class="acc__img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="Laptop showing website analytics charts" loading="lazy"><span class="acc__count">03 / 04</span></div>
-              </div>
-            </div></div>
-          </div>
-          <div class="acc__item">
-            <button class="acc__head" aria-expanded="false" aria-controls="acc-4"><span class="acc__label">Care &amp; updates</span><span class="acc__toggle" aria-hidden="true"></span></button>
-            <div class="acc__panel" id="acc-4" role="region"><div>
-              <div class="acc__body">
-                <div class="acc__text">
-                  <h3>Ongoing care and updates</h3>
-                  <p>A site you can update yourself. Change text and photos in minutes, or hand the bigger jobs to me.</p>
-                  <ul class="incl"><li>A walkthrough on editing at handover</li><li>14 days of free support after launch</li><li>Bigger changes at $90/hour</li></ul>
-                  <a class="btn btn--sm" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
-                </div>
-                <div class="acc__img"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80" alt="Smartphone on a desk showing app icons" loading="lazy"><span class="acc__count">04 / 04</span></div>
-              </div>
-            </div></div>
-          </div>
-        </div>
+      <ul class="svc-list" data-stagger>
+        <li><a class="svc-link" href="services.html#svc-1"><img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1000&q=80" alt="" loading="lazy"><span class="svc-link__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="svc-link__t">Website design</span></a></li>
+        <li><a class="svc-link" href="services.html#svc-2"><img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=80" alt="" loading="lazy"><span class="svc-link__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="svc-link__t">Framer development</span></a></li>
+        <li><a class="svc-link" href="services.html#svc-3"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80" alt="" loading="lazy"><span class="svc-link__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="svc-link__t">Launch &amp; SEO</span></a></li>
+        <li><a class="svc-link" href="services.html#svc-4"><img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1000&q=80" alt="" loading="lazy"><span class="svc-link__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="svc-link__t">Care &amp; updates</span></a></li>
+        <li><a class="svc-link" href="services.html#svc-5"><img src="assets/work-fernmoorphysiotherapy.jpg" alt="" loading="lazy"><span class="svc-link__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="svc-link__t">One-page websites</span></a></li>
+        <li><a class="svc-link" href="services.html#svc-6"><img src="assets/work-northbridgeconsulting.jpg" alt="" loading="lazy"><span class="svc-link__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span><span class="svc-link__t">Website rebuilds</span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BIG LINE -->
+  <section class="bigline" aria-label="Hand-crafted design, AI-powered speed">
+    <div class="bigline__track" data-drift aria-hidden="true">
+      <span>Hand-crafted design</span><span class="pic" aria-hidden="true"><img src="assets/pic-saltmereweddings.jpg" alt="" loading="lazy"></span><span>AI-powered speed</span><span class="pic" aria-hidden="true"><img src="assets/pic-fernmoorphysiotherapy.jpg" alt="" loading="lazy"></span><span>Hand-crafted design</span><span class="pic" aria-hidden="true"><img src="assets/pic-umbra.jpg" alt="" loading="lazy"></span><span>AI-powered speed</span>
     </div>
   </section>
 
   <!-- PROCESS -->
-  <section class="section" id="process" aria-labelledby="process-title">
-    <div class="wrap split">
-      <div class="side-intro">
-        <span class="eyebrow">Process</span>
-        <h2 id="process-title" data-split data-kinetic>Simple, clear, and fast.</h2>
-        <p class="sub reveal">A proven five-step process that takes you from first chat to live website in weeks, with no surprises along the way.</p>
-        <div class="reveal"><a class="btn btn--sm" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
-      </div>
-      <div class="timeline" data-timeline>
-        <div class="tl-line" aria-hidden="true"><span class="tl-fill"></span></div>
-        <ol class="tl-steps">
-          <li class="tl-step"><span class="tl-dot" aria-hidden="true">1</span><div class="tl-body"><span class="tl-when">Step 1 · Day 1 · 15 min</span><h3>Discovery call</h3><p>A free, no-pressure chat about your business, your customers and what you need your website to do. If we’re a good fit, I’ll send you a fixed quote and timeline.</p></div></li>
-          <li class="tl-step"><span class="tl-dot" aria-hidden="true">2</span><div class="tl-body"><span class="tl-when">Step 2 · Days 2–4</span><h3>Brief</h3><p>You fill in a simple website brief covering your services, style, pages and examples you like. Don’t stress if you don’t have everything. I’ll help fill the gaps and write or polish your content.</p></div></li>
-          <li class="tl-step"><span class="tl-dot" aria-hidden="true">3</span><div class="tl-body"><span class="tl-when">Step 3 · Week 1–2</span><h3>Design</h3><p>I design your homepage first so you can see the look and feel early. Once you’re happy with the direction, I design the remaining pages. This stage includes 2 rounds of revisions.</p></div></li>
-          <li class="tl-step"><span class="tl-dot" aria-hidden="true">4</span><div class="tl-body"><span class="tl-when">Step 4 · Week 2–3</span><h3>Build</h3><p>I build your website in Framer with smooth animations, mobile-friendly layouts and SEO basics. You get a private preview link to check everything on your own phone and computer before it goes live.</p></div></li>
-          <li class="tl-step"><span class="tl-dot" aria-hidden="true">5</span><div class="tl-body"><span class="tl-when">Step 5 · Week 3</span><h3>Launch and support</h3><p>I connect your domain, run final checks and put your site live. You’ll get a quick walkthrough on editing it yourself, plus 14 days of free support for any small fixes.</p></div></li>
-        </ol>
+  <section class="deck" id="process" aria-labelledby="process-title">
+    <div class="wrap deck__head">
+      <p class="label reveal">How it works</p>
+      <h2 id="process-title" class="h-xl" data-split>Five steps. No surprises.</h2>
+      <p class="sub reveal">From first chat to live website in about three weeks, with a fixed quote before anything starts.</p>
+    </div>
+    <div class="deck__track" data-deck style="--n:5">
+      <div class="deck__stage">
+        <article class="dcard dcard--dark" data-rot="-3" style="--rot:-3deg">
+          <div class="dcard__top"><span class="dcard__step">Step 01</span><span>Day 1 · 15 min</span></div>
+          <span class="dcard__num" aria-hidden="true">01</span>
+          <h3>Discovery call</h3>
+          <p>A free, no-pressure chat about your business, your customers and what your website needs to do. If we’re a good fit, you get a fixed quote and timeline.</p>
+        </article>
+        <article class="dcard dcard--light" data-rot="2.5" style="--rot:2.5deg">
+          <div class="dcard__top"><span class="dcard__step">Step 02</span><span>Days 2–4</span></div>
+          <span class="dcard__num" aria-hidden="true">02</span>
+          <h3>Brief</h3>
+          <p>You fill in a simple brief covering your services, style and examples you like. Don’t have everything? I’ll help fill the gaps and write or polish your content.</p>
+        </article>
+        <article class="dcard dcard--accent" data-rot="-1.5" style="--rot:-1.5deg">
+          <div class="dcard__top"><span class="dcard__step">Step 03</span><span>Weeks 1–2</span></div>
+          <span class="dcard__num" aria-hidden="true">03</span>
+          <h3>Design</h3>
+          <p>I design your homepage first so you see the look and feel early. Once you’re happy, I design the remaining pages. Two rounds of revisions included.</p>
+        </article>
+        <article class="dcard dcard--dark" data-rot="3.5" style="--rot:3.5deg">
+          <div class="dcard__top"><span class="dcard__step">Step 04</span><span>Weeks 2–3</span></div>
+          <span class="dcard__num" aria-hidden="true">04</span>
+          <h3>Build</h3>
+          <p>I build your site in Framer with smooth animations, mobile-friendly layouts and SEO basics. You get a private preview link to check it on your own phone.</p>
+        </article>
+        <article class="dcard dcard--light" data-rot="-2" style="--rot:-2deg">
+          <div class="dcard__top"><span class="dcard__step">Step 05</span><span>Week 3</span></div>
+          <span class="dcard__num" aria-hidden="true">05</span>
+          <h3>Launch &amp; support</h3>
+          <p>I connect your domain, run final checks and put your site live. You get a walkthrough on editing it yourself, plus 14 days of free support.</p>
+        </article>
+        <p class="deck__count" aria-hidden="true"><span data-deck-now>01</span> / 05</p>
       </div>
     </div>
   </section>
 
   <!-- PRICING -->
-  <section class="section section--soft" id="pricing" aria-labelledby="pricing-title">
+  <section class="section pricing" id="pricing" aria-labelledby="pricing-title">
     <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">Pricing</span>
-        <h2 id="pricing-title" data-split data-kinetic>Straightforward pricing.</h2>
-        <p class="sub reveal">Clear packages in AUD with no hidden fees. Pick a starting point, or ask for a custom quote.</p>
+      <div class="sec-head">
+        <h2 id="pricing-title" class="h-xl" data-split>Straightforward pricing</h2>
+        <p class="sec-head__sub reveal">Clear packages in AUD with no hidden fees. Pick a starting point, or ask for a custom quote.</p>
       </div>
-      <div class="pricing" data-stagger>
+      <div class="plans plans--row" data-stagger>
         <article class="plan">
-          <div class="plan__top">
-            <div class="plan__row"><span class="plan__for">For new businesses</span></div>
-            <h3>One-Page Website</h3>
+          <div class="plan__main">
+            <div class="plan__head"><span class="plan__for">For new businesses</span></div>
+            <h3 class="plan__name">One-Page Website</h3>
             <p class="plan__desc">A single, focused page built to turn visitors into enquiries. Ideal for new businesses, promotions or capturing leads fast.</p>
             <div class="plan__price">$<span data-count="590">0</span><small>AUD</small></div>
-            <span class="plan__note">Starting price · one-off fee</span>
-            <a class="plan__btn" href="contact.html"><span class="plan__btn-label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
-            <span class="plan__fine">Live within a week</span>
+            <p class="plan__note">One-off fee · live within a week</p>
           </div>
-          <div class="plan__list">
-            <span>What’s included</span>
-            <ul><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>One focused, scrolling page</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Mobile-first custom design</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Enquiry form to your inbox</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>SEO basics and domain setup</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>14 days of free support</li></ul>
-          </div>
+          <ul class="plan__list"><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>One focused, scrolling page</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Mobile-first custom design</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Enquiry form to your inbox</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>SEO basics and domain setup</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>14 days of free support</li></ul>
+          <div class="plan__cta"><a class="btn btn--block" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
         </article>
         <article class="plan plan--pop">
-          <div class="plan__top">
-            <div class="plan__row"><span class="plan__for">For growing businesses</span><span class="plan__badge">Most popular</span></div>
-            <h3>Business Website</h3>
+          <div class="plan__main">
+            <div class="plan__head"><span class="plan__for">For growing businesses</span><span class="plan__badge">Most popular</span></div>
+            <h3 class="plan__name">Business Website</h3>
             <p class="plan__desc">A 5–10 page website designed around your business, not a template. Mobile-first, fast-loading and ready for Google.</p>
             <div class="plan__price">$<span data-count="1990">0</span><small>AUD</small></div>
-            <span class="plan__note">Starting price · one-off fee</span>
-            <a class="plan__btn" href="contact.html"><span class="plan__btn-label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
-            <span class="plan__fine">Most sites go live in about 3 weeks</span>
+            <p class="plan__note">One-off fee · most sites live in about 3 weeks</p>
           </div>
-          <div class="plan__list">
-            <span>What’s included</span>
-            <ul><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>5–10 custom-designed pages</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Mobile-first and fast-loading</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>SEO essentials on every page</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>2 rounds of design revisions</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Edit it yourself in Framer</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>14 days of free support</li></ul>
-          </div>
+          <ul class="plan__list"><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>5–10 custom-designed pages</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Mobile-first and fast-loading</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>SEO essentials on every page</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>2 rounds of design revisions</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Edit it yourself in Framer</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>14 days of free support</li></ul>
+          <div class="plan__cta"><a class="btn btn--block btn--light" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
         </article>
         <article class="plan">
-          <div class="plan__top">
-            <div class="plan__row"><span class="plan__for">For businesses with plenty to say</span></div>
-            <h3>Large Website</h3>
-            <p class="plan__desc">A bigger, well-structured site with more pages, sections and content, organised so visitors find what they need easily.</p>
+          <div class="plan__main">
+            <div class="plan__head"><span class="plan__for">For businesses with plenty to say</span></div>
+            <h3 class="plan__name">Large Website</h3>
+            <p class="plan__desc">A bigger, well-structured site with more pages and content, organised so visitors find what they need easily.</p>
             <div class="plan__price">$<span data-count="3490">0</span><small>AUD</small></div>
-            <span class="plan__note">Starting price · one-off fee</span>
-            <a class="plan__btn" href="contact.html"><span class="plan__btn-label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
-            <span class="plan__fine">Fixed quote after a free call</span>
+            <p class="plan__note">One-off fee · fixed quote after a free call</p>
           </div>
-          <div class="plan__list">
-            <span>What’s included</span>
-            <ul><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>10+ pages and sections</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Clear structure and navigation</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Blog or CMS collections</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>SEO essentials on every page</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>14 days of free support</li></ul>
-          </div>
+          <ul class="plan__list"><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>10+ pages and sections</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Clear structure and navigation</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Blog or CMS collections</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>SEO essentials on every page</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>14 days of free support</li></ul>
+          <div class="plan__cta"><a class="btn btn--block" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
         </article>
-      </div>
-      <div class="pricing pricing--extra" data-stagger>
-        <article class="plan plan--wide">
-          <div class="plan__top">
-            <div class="plan__row"><span class="plan__for">For slow or clunky sites</span></div>
-            <h3>Website Rebuild</h3>
+        <article class="plan">
+          <div class="plan__main">
+            <div class="plan__head"><span class="plan__for">For slow or clunky sites</span></div>
+            <h3 class="plan__name">Website Rebuild</h3>
             <p class="plan__desc">Stuck with a slow, clunky or hard-to-manage website? I’ll rebuild it in Framer and move your content across.</p>
             <div class="plan__price">$<span data-count="1490">0</span><small>AUD</small></div>
-            <span class="plan__note">Starting price · one-off fee</span>
-            <a class="plan__btn" href="contact.html"><span class="plan__btn-label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
-            <span class="plan__fine">Keep your Google rankings</span>
+            <p class="plan__note">One-off fee · keep your Google rankings</p>
           </div>
-          <div class="plan__list">
-            <span>What’s included</span>
-            <ul><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Rebuilt in Framer from scratch</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Content moved across for you</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Redirects set up for old pages</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Faster, easier to manage</li></ul>
-          </div>
+          <ul class="plan__list"><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Rebuilt in Framer from scratch</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Content moved across for you</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Redirects set up for old pages</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Faster, easier to manage</li></ul>
+          <div class="plan__cta"><a class="btn btn--block" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
         </article>
-        <article class="plan plan--wide">
-          <div class="plan__top">
-            <div class="plan__row"><span class="plan__for">For live websites</span></div>
-            <h3>Updates &amp; Changes</h3>
+        <article class="plan">
+          <div class="plan__main">
+            <div class="plan__head"><span class="plan__for">For live websites</span></div>
+            <h3 class="plan__name">Updates &amp; Changes</h3>
             <p class="plan__desc">Simple text and image edits are yours to make in Framer’s easy editor. For bigger changes, I’m here to help.</p>
             <div class="plan__price">$<span data-count="90">0</span><small>/hour</small></div>
-            <span class="plan__note">Pay only for the time used</span>
-            <a class="plan__btn" href="contact.html"><span class="plan__btn-label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
-            <span class="plan__fine">Most updates take under two hours</span>
+            <p class="plan__note">Pay only for the time used · most updates take under two hours</p>
           </div>
-          <div class="plan__list">
-            <span>What’s included</span>
-            <ul><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>New pages and sections</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Seasonal and promo updates</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Layout and design tweaks</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Group changes to save money</li></ul>
-          </div>
+          <ul class="plan__list"><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>New pages and sections</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Seasonal and promo updates</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Layout and design tweaks</li><li><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></i>Group changes to save money</li></ul>
+          <div class="plan__cta"><a class="btn btn--block" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
         </article>
       </div>
       <p class="note reveal">Every website is built in Framer, designed by me and sped up with AI, so you get quality work faster and at a fairer price.</p>
@@ -298,89 +292,92 @@
   </section>
 
   <!-- ABOUT -->
-  <section class="section" id="about" aria-labelledby="about-title">
-    <div class="wrap about">
+  <section class="section about" id="about" aria-labelledby="about-title">
+    <div class="wrap about__grid">
       <div class="about__body">
-        <span class="about__kicker reveal"><svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3l14 7-6 2-2 6z"/></svg>The person behind THINGBESIDE</span>
-        <h2 id="about-title" data-split>Hi, I’m Seksan,<br>the human behind<br><span class="dim">THINGBESIDE.</span></h2>
+        <p class="label reveal">The human behind THINGBESIDE</p>
+        <h2 id="about-title" class="h-lg" data-split>Hi, I’m Seksan. <span class="muted">I build websites that bring in work.</span></h2>
+        <figure class="about__photo reveal">
+          <img src="assets/about-person.webp" width="1142" height="1377" loading="lazy" alt="Portrait of Seksan, the person behind THINGBESIDE, in silhouette against a red backdrop">
+          <figcaption>Seksan · Founder &amp; designer</figcaption>
+        </figure>
         <p class="about__lead reveal">I create modern, high-performing websites that help businesses stand out and turn visitors into customers. I work one-on-one with tradies, local businesses and individuals, from Brisbane to anywhere.</p>
         <p class="about__em reveal">Personally designed. Thoughtfully built. Powered by smart technology.</p>
-        <div class="facts" data-stagger>
-          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Brisbane, working worldwide</b><span>Remote-friendly, Australian hours</span></div></div>
-          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>About 3 weeks</b><span>Typical project timeline</span></div></div>
-          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5 9-5z"/><path d="m3 13 9 5 9-5"/></svg><div><b>Design, build &amp; launch</b><span>All handled in Framer</span></div></div>
-          <div class="fact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg><div><b>One-on-one service</b><span>From first call to handover</span></div></div>
-        </div>
+        <ul class="facts" data-stagger>
+          <li><b>Brisbane, working worldwide</b><span>Remote-friendly, Australian hours</span></li>
+          <li><b>About 3 weeks</b><span>Typical project timeline</span></li>
+          <li><b>Design, build &amp; launch</b><span>All handled in Framer</span></li>
+          <li><b>One-on-one service</b><span>From first call to handover</span></li>
+        </ul>
       </div>
-      <div class="about__photo reveal"><img src="assets/about-person.webp" width="1142" height="1377" loading="lazy" alt="Portrait of Seksan, the person behind THINGBESIDE, in silhouette against a red backdrop"></div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section section--soft" id="faq" aria-labelledby="faq-title">
+  <section class="section faq-sec" id="faq" aria-labelledby="faq-title">
     <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">FAQ</span>
-        <h2 id="faq-title" data-split data-kinetic>Questions? Answered.</h2>
-        <p class="sub reveal">Everything you might want to know before we start. Can’t find your answer? Just ask.</p>
+      <div class="sec-head">
+        <h2 id="faq-title" class="h-xl" data-split>Questions? Answered.</h2>
+        <div class="reveal"><a class="btn btn--white btn--sm" href="contact.html"><span class="btn__label"><span>Ask me anything</span><span aria-hidden="true">Ask me anything</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
       </div>
-      <div class="faq reveal">
-          <div class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="fa1">What platform do you build websites on?<span class="faq__icon" aria-hidden="true"></span></button>
-            <div class="faq__a" id="fa1" role="region"><div><p>I build every website in Framer, a modern website builder trusted by startups and design studios worldwide. It gives you a fast, secure and great-looking site with smooth animations, and it’s easy for you to edit after launch.</p></div></div>
-          </div>
-          <div class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="fa2">Do you use AI to make my website? Will it look generic?<span class="faq__icon" aria-hidden="true"></span></button>
-            <div class="faq__a" id="fa2" role="region"><div><p>AI helps me with the repetitive parts, like layout drafts and first-pass copy, so I work faster. Every site is then designed and built by me in Framer, with each detail refined by hand. Your site is built around your business, not a template.</p></div></div>
-          </div>
-          <div class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="fa3">Do I need my own domain and hosting?<span class="faq__icon" aria-hidden="true"></span></button>
-            <div class="faq__a" id="fa3" role="region"><div><p>If you already have a domain, we’ll connect it to your Framer site. If not, I’ll help you set one up. Hosting is through Framer, so your site loads fast, stays secure and needs no technical setup from you.</p></div></div>
-          </div>
-          <div class="faq__item">
-            <button class="faq__q" aria-expanded="false" aria-controls="fa4">Can I update the website myself?<span class="faq__icon" aria-hidden="true"></span></button>
-            <div class="faq__a" id="fa4" role="region"><div><p>Yes. Framer has a simple visual editor, so you can change text, images and blog posts without touching any code. I’ll show you how at handover, or you can leave updates to me with a care plan.</p></div></div>
-          </div>
+      <div class="faq">
+        <div class="faq__item">
+          <h3><button class="faq__q" aria-expanded="false" aria-controls="fa1">What platform do you build websites on?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="fa1" role="region"><div><p>I build every website in Framer, a modern website builder trusted by startups and design studios worldwide. It gives you a fast, secure and great-looking site with smooth animations, and it’s easy for you to edit after launch.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button class="faq__q" aria-expanded="false" aria-controls="fa2">Do you use AI to make my website? Will it look generic?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="fa2" role="region"><div><p>AI helps me with the repetitive parts, like layout drafts and first-pass copy, so I work faster. Every site is then designed and built by me in Framer, with each detail refined by hand. Your site is built around your business, not a template.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button class="faq__q" aria-expanded="false" aria-controls="fa3">Do I need my own domain and hosting?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="fa3" role="region"><div><p>If you already have a domain, we’ll connect it to your Framer site. If not, I’ll help you set one up. Hosting is through Framer, so your site loads fast, stays secure and needs no technical setup from you.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button class="faq__q" aria-expanded="false" aria-controls="fa4">Can I update the website myself?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="fa4" role="region"><div><p>Yes. Framer has a simple visual editor, so you can change text, images and blog posts without touching any code. I’ll show you how at handover, or you can leave updates to me.</p></div></div>
+        </div>
+        <div class="faq__item">
+          <h3><button class="faq__q" aria-expanded="false" aria-controls="fa5">How long does a website take?<span class="faq__icon" aria-hidden="true"></span></button></h3>
+          <div class="faq__a" id="fa5" role="region"><div><p>A one-page site is usually live within a week. A 5–10 page business website takes about three weeks from the first call to launch, depending on how quickly we get your content together.</p></div></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FINAL CTA -->
-  <section class="cta" aria-labelledby="cta-title">
-    <div class="cta__card">
-      <div class="cta__glow" aria-hidden="true"></div>
-      <h2 id="cta-title" data-split data-kinetic>Ready for a website that works?</h2>
-      <p class="sub reveal">Book a free 15-minute call. Tell me about your business, and I’ll tell you how I’d build your site.</p>
-      <div class="reveal"><a class="btn" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  <section class="outro" aria-labelledby="cta-title">
+    <h2 id="cta-title" class="outro__line" data-wave>Ready for a website that works?</h2>
+    <div class="wrap outro__foot">
+      <p class="outro__sub reveal">Book a free 15-minute call. Tell me about your business, and I’ll tell you how I’d build your site.</p>
+      <div class="reveal"><a class="btn" href="contact.html"><span class="btn__label"><span>Book a free call</span><span aria-hidden="true">Book a free call</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <div class="wrap">
+  <div class="footer__panel">
     <div class="footer__top">
-      <div>
-        <a class="wordmark" href="index.html">THINGBESIDE</a>
-        <p>AI-powered efficiency, hand-crafted design. Your new site live in weeks, ready to win customers.</p>
+      <div class="footer__lead">
+        <h2 class="footer__title">Start with a free <span class="nowrap">15-minute</span> call</h2>
+        <a class="footer__mail" href="mailto:thingbeside@gmail.com"><span>thingbeside@gmail.com</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+        <p class="footer__small">Replies within 24 hours. Based in Brisbane, working with Australia &amp; worldwide.</p>
       </div>
-      <div>
-        <h4>Pages</h4>
+      <nav class="footer__cols" aria-label="Footer">
         <ul><li><a href="index.html">Home</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul><li><a href="mailto:thingbeside@gmail.com">thingbeside@gmail.com</a></li><li><a href="contact.html">Book a free call</a></li><li>Brisbane, QLD</li></ul>
-      </div>
+        <ul><li><a href="index.html#work">Featured work</a></li><li><a href="index.html#process">Process</a></li><li><a href="services.html#pricing">Pricing</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#faq">FAQ</a></li></ul>
+        <ul><li><a href="mailto:thingbeside@gmail.com">Email me</a></li><li><a href="contact.html">Book a free call</a></li><li><a href="privacy.html">Privacy policy</a></li></ul>
+      </nav>
     </div>
     <div class="footer__mark" aria-hidden="true"><span>THINGBESIDE</span></div>
     <div class="footer__legal">
       <span>© <span data-year>2026</span> THINGBESIDE · ABN 00 000 000 000</span>
-      <a href="privacy.html">Privacy policy</a>
+      <span>Designed by hand in Brisbane, QLD</span>
     </div>
   </div>
 </footer>
 </div>
 
-<script src="assets/main.js?v=9"></script>
+<script src="assets/main.js?v=29"></script>
 </body>
 </html>
