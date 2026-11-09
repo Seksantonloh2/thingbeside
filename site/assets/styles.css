@@ -543,6 +543,7 @@ b, strong { font-weight: 600; }
   font: 500 clamp(56px, 9vw, 140px)/.8 var(--font-d); letter-spacing: -.06em; color: var(--on-dark);
 }
 .preloader.done { transform: translateY(-100%); border-radius: 0 0 50% 50% / 0 0 26vh 26vh; }
+.js .preloader { visibility: hidden; }
 .no-preload .preloader { display: none; }
 
 /* ---------------------------------------------------------------- motion: page, reveal, blur-in */

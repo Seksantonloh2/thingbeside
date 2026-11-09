@@ -77,6 +77,7 @@
     const wrap = $('.preloader');
     if (!wrap || root.classList.contains('no-preload') || reduce) { wrap && wrap.remove(); done(); return; }
     store.set('tb-loaded', '1');
+    wrap.style.visibility = 'visible'; // shown only once the intro starts
     const count = $('.preloader__count', wrap), frame = $('.preloader__frame', wrap);
     const letters = $$('.pl > span', wrap);
     const ease = (x) => 1 - Math.pow(1 - x, 3);
