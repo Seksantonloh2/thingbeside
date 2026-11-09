@@ -520,11 +520,27 @@ b, strong { font-weight: 600; }
 
 /* ---------------------------------------------------------------- preloader */
 .preloader {
-  position: fixed; inset: 0; z-index: 100; display: grid; place-items: center;
-  background: var(--dark); transition: transform 1.15s var(--ease-io), border-radius 1.15s var(--ease-io);
+  position: fixed; inset: 0; z-index: 100; overflow: hidden; background: var(--dark);
+  transition: transform 1.15s var(--ease-io), border-radius 1.15s var(--ease-io);
 }
-.preloader canvas { width: min(88vw, 1040px); height: auto; }
-.preloader__count { position: absolute; right: var(--gutter); bottom: var(--gutter); font: 500 clamp(56px, 9vw, 140px)/.8 var(--font-d); letter-spacing: -.06em; color: var(--on-dark); }
+.preloader__frame {
+  --f: 0;
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: calc(28vw + (100vw - 28vw) * var(--f)); height: calc(30vh + (100vh - 30vh) * var(--f));
+  border-radius: calc(16px * (1 - var(--f)));
+  background: url('hero-bg.jpg') center / cover no-repeat;
+}
+.preloader__frame::after { content: ''; position: absolute; inset: 0; background: rgba(17, 18, 18, .5); }
+.preloader__word {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2; white-space: nowrap;
+  font: 500 clamp(40px, 7vw, 110px)/1.05 var(--font-d); letter-spacing: -.05em; color: #fff;
+}
+.pl { display: inline-block; overflow: hidden; vertical-align: top; padding: .14em .02em; margin: -.14em 0; }
+.pl > span { display: inline-block; will-change: transform; }
+.preloader__count {
+  position: absolute; right: var(--gutter); bottom: var(--gutter); z-index: 2;
+  font: 500 clamp(56px, 9vw, 140px)/.8 var(--font-d); letter-spacing: -.06em; color: var(--on-dark);
+}
 .preloader.done { transform: translateY(-100%); border-radius: 0 0 50% 50% / 0 0 26vh 26vh; }
 .no-preload .preloader { display: none; }
 
