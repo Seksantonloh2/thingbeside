@@ -79,13 +79,15 @@
     store.set('tb-loaded', '1');
     wrap.style.visibility = 'visible'; // shown only once the intro starts
     const list = $('.pp__words', wrap), text = $('.pp__text', wrap), strips = $$('.pp__strip', wrap);
-    const base = $$('.pp__word', wrap), STEP = 440, SHOW = 4000; // the ticker animates for 4 seconds
-    for (let k = 0; k < 3; k++) base.forEach((w) => list.append(w.cloneNode(true))); // enough words to cycle for 4s
+    const words = $$('.pp__word', wrap), SHOW = 4000;
+    const STEP = SHOW / words.length; // each of the four words gets a turn across the 4 seconds
     document.body.style.overflow = 'hidden'; // scroll is locked during the intro
     let i = 0;
     const show = () => { list.style.transform = `translate3d(0,${-i * 1.2}em,0)`; };
     show();
-    const ticker = setInterval(() => { i += 1; show(); }, STEP);
+    const ticker = setInterval(() => {
+      if (i < words.length - 1) { i += 1; show(); } else clearInterval(ticker);
+    }, STEP);
     setTimeout(() => {
       clearInterval(ticker);
       text.classList.add('is-out');
