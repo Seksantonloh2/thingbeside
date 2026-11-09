@@ -360,6 +360,24 @@
   /* ---------- Hero video: with reduced motion, drop it and keep the poster photo ---------- */
   if (reduce) $$('.hero__video').forEach((v) => v.remove());
 
+  /* ---------- Hero video: crossfade between two copies so the loop restarts without a cut ---------- */
+  const heroVids = $$('.hero__video');
+  if (heroVids.length === 2 && !reduce) {
+    const XF = 1.0; // seconds of overlap before the end
+    let active = 0, busy = false;
+    heroVids.forEach((v, k) => v.addEventListener('timeupdate', () => {
+      if (k !== active || busy || !v.duration || v.duration - v.currentTime > XF) return;
+      busy = true;
+      const next = heroVids[1 - k];
+      next.currentTime = 0;
+      next.play().catch(() => {});
+      next.classList.add('is-on');
+      v.classList.remove('is-on');
+      active = 1 - k;
+      setTimeout(() => { v.pause(); v.currentTime = 0; busy = false; }, XF * 1000 + 150);
+    }));
+  }
+
   /* ---------- Boot ---------- */
   runScroll();
   preloader(() => requestAnimationFrame(enter));

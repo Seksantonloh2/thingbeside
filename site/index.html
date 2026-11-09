@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=45">
+  <link rel="stylesheet" href="assets/styles.css?v=47">
   <script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('tb-loaded'))document.documentElement.classList.add('no-preload')}catch(e){}setTimeout(function(){var p=document.querySelector('.page');p&&p.classList.remove('entering')},5000)</script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","name":"THINGBESIDE","description":"Website design and Framer development for Australian small businesses.","founder":{"@type":"Person","name":"Seksan Tonloh"},"areaServed":["Brisbane","Australia","Worldwide"],"address":{"@type":"PostalAddress","addressLocality":"Brisbane","addressRegion":"QLD","addressCountry":"AU"},"email":"thingbeside@gmail.com","priceRange":"From AUD 590"}
@@ -57,7 +57,11 @@
   <!-- HERO -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero__card">
-      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/hero-bg.jpg" aria-hidden="true">
+      <video class="hero__video is-on" autoplay muted loop playsinline preload="auto" poster="assets/hero-bg.jpg" aria-hidden="true">
+        <source src="assets/hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 760px)">
+        <source src="assets/hero-bg.mp4" type="video/mp4">
+      </video>
+      <video class="hero__video" muted playsinline preload="auto" poster="assets/hero-bg.jpg" aria-hidden="true">
         <source src="assets/hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 760px)">
         <source src="assets/hero-bg.mp4" type="video/mp4">
       </video>
@@ -383,6 +387,6 @@
 </footer>
 </div>
 
-<script src="assets/main.js?v=45"></script>
+<script src="assets/main.js?v=47"></script>
 </body>
 </html>
