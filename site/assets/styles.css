@@ -600,7 +600,9 @@ b, strong { font-weight: 600; }
 .about__body > .about__photo { max-width: 460px; margin-top: clamp(28px, 3.5vw, 48px); }
 
 /* pricing: all plans in one horizontal row (services page) */
-.plans--row { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; max-width: none; }
+.plans--row { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; max-width: none; }
+.plans--row .plan { grid-column: span 2; }
+.plans--row .plan:nth-child(n + 4) { grid-column: span 3; }
 .plans--row .plan { padding: clamp(20px, 1.8vw, 28px); gap: 22px; }
 .plans--row .plan__name { font-size: clamp(22px, 1.9vw, 28px); }
 .plans--row .plan__price { font-size: clamp(40px, 3.4vw, 52px); }
@@ -617,3 +619,8 @@ b, strong { font-weight: 600; }
 
 /* pricing: buttons sit at the bottom of every card so they line up across the row */
 .plan__cta { margin-top: auto; }
+
+/* hero: keep the computer centred on small devices */
+@media (max-width: 760px) {
+  .hero__card { background-position: 87% center; }
+}
