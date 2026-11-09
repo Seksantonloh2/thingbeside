@@ -357,6 +357,9 @@
   /* ---------- Footer year ---------- */
   $$('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
 
+  /* ---------- Hero video: with reduced motion, drop it and keep the poster photo ---------- */
+  if (reduce) $$('.hero__video').forEach((v) => v.remove());
+
   /* ---------- Boot ---------- */
   runScroll();
   preloader(() => requestAnimationFrame(enter));

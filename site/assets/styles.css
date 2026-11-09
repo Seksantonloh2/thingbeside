@@ -646,3 +646,6 @@ b, strong { font-weight: 600; }
   .plans, .plans--row { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; }
   .plans--row .plan, .plans--row .plan:nth-child(n + 4) { grid-column: auto; }
 }
+
+/* hero: looping background video (poster = photo) */
+.hero__video { position: absolute; inset: 0; z-index: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
