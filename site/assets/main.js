@@ -79,7 +79,7 @@
     store.set('tb-loaded', '1');
     wrap.style.visibility = 'visible'; // shown only once the intro starts
     const list = $('.pp__words', wrap), text = $('.pp__text', wrap), strips = $$('.pp__strip', wrap);
-    const n = $$('.pp__word', wrap).length, STEP = 440, HOLD = 320;
+    const n = $$('.pp__word', wrap).length, STEP = 440, SHOW = 4000; // the preloader stays up for 4 seconds
     document.body.style.overflow = 'hidden'; // scroll is locked during the intro
     let i = 0;
     const show = () => { list.style.transform = `translate3d(0,${-i * 1.2}em,0)`; };
@@ -90,8 +90,8 @@
       strips.forEach((s) => s.classList.add('is-out'));
       done();
       document.body.style.overflow = '';
-    }, STEP * (n - 1) + HOLD);
-    setTimeout(() => wrap.remove(), STEP * (n - 1) + HOLD + 1600);
+    }, SHOW);
+    setTimeout(() => wrap.remove(), SHOW + 1600);
   }
 
   /* ---------- Page enter / leave (blur between pages) ---------- */
