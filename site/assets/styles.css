@@ -614,7 +614,7 @@ b, strong { font-weight: 600; }
 }
 @media (max-width: 760px) {
   .plans--row { grid-template-columns: 1fr; }
-  .plans--row .plan { grid-column: auto; }
+  .plans--row .plan, .plans--row .plan:nth-child(n + 4) { grid-column: auto; }
 }
 
 /* pricing: buttons sit at the bottom of every card so they line up across the row */
