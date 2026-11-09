@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 43  # bump to make browsers fetch fresh styles.css and main.js
+V = 44  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -209,6 +209,9 @@ ROTATOR = ('<span class="pic pic--rotate" aria-hidden="true">'
 HERO = f'''  <!-- HERO -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero__card">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/hero-bg.jpg" aria-hidden="true">
+        <source src="assets/hero-bg.mp4" type="video/mp4">
+      </video>
       <div class="hero__content">
         <p class="hero__eyebrow reveal">Web design studio · Brisbane &amp; worldwide</p>
         <h1 id="hero-title" class="display" data-split data-load>Modern websites, <br>built in {ROTATOR} days</h1>
