@@ -624,3 +624,9 @@ b, strong { font-weight: 600; }
 @media (max-width: 760px) {
   .hero__card { background-position: 87% center; }
 }
+
+/* pricing: one column on small devices (phones and tablets) */
+@media (max-width: 1100px) {
+  .plans, .plans--row { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; }
+  .plans--row .plan, .plans--row .plan:nth-child(n + 4) { grid-column: auto; }
+}

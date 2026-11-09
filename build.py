@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 33  # bump to make browsers fetch fresh styles.css and main.js
+V = 36  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
