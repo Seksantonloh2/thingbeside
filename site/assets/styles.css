@@ -528,7 +528,7 @@ b, strong { font-weight: 600; }
 .pp__strip:last-child { border-right: 0; }
 .pp__strip.is-out { transform: translateY(-100%); }
 .pp__text {
-  position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: space-between;
+  position: absolute; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center; gap: .3em;
   padding: 0 var(--gutter); transition: opacity .35s ease;
 }
 .pp__text.is-out { opacity: 0; }

@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 53  # bump to make browsers fetch fresh styles.css and main.js
+V = 54  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -185,7 +185,7 @@ def page(file, title, desc, body, current=None, extra_head='', preloader=False, 
     strips = ''.join(f'<span class="pp__strip" style="--d:{d}"></span>' for d in ['0ms', '360ms', '120ms', '240ms'])
     words = ''.join(f'<span class="pp__word">{w}</span>' for w in ['Design', 'Build', 'Launch', 'Grow'])
     pre = (f'<div class="preloader" aria-hidden="true">\n  <div class="pp__strips">{strips}</div>\n'
-           f'  <div class="pp__text"><span class="pp__label">THINGBESIDE</span>'
+           f'  <div class="pp__text"><span class="pp__label">We build</span>'
            f'<span class="pp__ticker"><span class="pp__words">{words}</span></span></div>\n</div>\n'
            if preloader else '')
     html = (head(title, desc, extra_head) + '<body>\n' + pre + nav(current, dark_top)
