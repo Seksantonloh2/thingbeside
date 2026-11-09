@@ -401,7 +401,7 @@
       const r = card.getBoundingClientRect();
       W = Math.max(1, Math.round(r.width)); H = Math.max(1, Math.round(r.height));
       canvas.width = W; canvas.height = H;
-      step = W < 760 ? 5 : 6; dot = step - 1;
+      step = 3; dot = 3; // small, gap-free particles show more of the photo
       // draw the photo exactly like the CSS background (cover + background-position)
       const off = document.createElement('canvas'); off.width = W; off.height = H;
       const o = off.getContext('2d');
@@ -456,7 +456,7 @@
         if (ix >= W || iy >= H || ix + sz <= 0 || iy + sz <= 0) continue;
         const x0 = ix < 0 ? 0 : ix, x1 = Math.min(W, ix + sz), y1 = Math.min(H, iy + sz);
         const c = col[i];
-        for (let yy = iy < 0 ? 0 : iy; yy < y1; yy++) buf.fill(c, yy * W + x0, yy * W + x1);
+        for (let yy = iy < 0 ? 0 : iy; yy < y1; yy++) { let p = yy * W + x0; const e = yy * W + x1; while (p < e) buf[p++] = c; }
       }
       ctx.putImageData(data, 0, 0);
       // sleep once everything has settled and the pointer is still
