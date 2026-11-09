@@ -72,58 +72,37 @@
     requestAnimationFrame(tick);
   }
 
-  /* ---------- LED preloader: THINGBESIDE lights up dot by dot, then the curtain lifts ---------- */
-  const FONT = {
-    T: ['11111', '00100', '00100', '00100', '00100', '00100', '00100'],
-    H: ['10001', '10001', '10001', '11111', '10001', '10001', '10001'],
-    I: ['11111', '00100', '00100', '00100', '00100', '00100', '11111'],
-    N: ['10001', '10001', '11001', '10101', '10011', '10001', '10001'],
-    G: ['01110', '10001', '10000', '10111', '10001', '10001', '01111'],
-    B: ['11110', '10001', '10001', '11110', '10001', '10001', '11110'],
-    E: ['11111', '10000', '10000', '11110', '10000', '10000', '11111'],
-    S: ['01111', '10000', '10000', '01110', '00001', '00001', '11110'],
-    D: ['11100', '10010', '10001', '10001', '10001', '10010', '11100'],
-  };
+  /* ---------- Intro preloader: 0-100 counter, letters rise, hero frame expands, overlay wipes away ---------- */
   function preloader(done) {
     const wrap = $('.preloader');
     if (!wrap || root.classList.contains('no-preload') || reduce) { wrap && wrap.remove(); done(); return; }
     store.set('tb-loaded', '1');
-    const word = 'THINGBESIDE', pad = 1, cols = word.length * 6 - 1 + pad * 2, rows = 7 + pad * 2;
-    const grid = [];
-    [...word].forEach((ch, ci) => FONT[ch].forEach((r, y) => [...r].forEach((b, x) => {
-      if (b === '1') grid.push({ x: pad + ci * 6 + x, y: pad + y, at: 0 });
-    })));
-    const cv = $('canvas', wrap), ctx = cv.getContext('2d'), dpr = Math.min(2, devicePixelRatio || 1);
-    const cell = 16; cv.width = cols * cell * dpr; cv.height = rows * cell * dpr;
-    ctx.scale(dpr, dpr);
-    const lit = new Set(grid.map((d) => d.x + ',' + d.y));
-    grid.forEach((d) => { d.at = 100 + d.x * 20 + Math.random() * 240; });
-    const count = $('.preloader__count', wrap), t0 = performance.now(), total = 2100;
-    const draw = (now) => {
-      const t = now - t0;
-      ctx.clearRect(0, 0, cols * cell, rows * cell);
-      for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
-        if (lit.has(x + ',' + y)) continue;
-        ctx.fillStyle = '#1e1f1f';
-        ctx.beginPath(); ctx.arc(x * cell + cell / 2, y * cell + cell / 2, cell * 0.28, 0, 7); ctx.fill();
-      }
-      grid.forEach((d) => {
-        let a = t < d.at ? 0 : Math.min(1, (t - d.at) / 120);
-        if (a > 0 && a < 1 && Math.random() < 0.35) a *= 0.2; // flicker on ignition
-        const cx = d.x * cell + cell / 2, cy = d.y * cell + cell / 2;
-        ctx.fillStyle = '#1e1f1f';
-        ctx.beginPath(); ctx.arc(cx, cy, cell * 0.28, 0, 7); ctx.fill();
-        if (!a) return;
-        ctx.shadowColor = `rgba(249,9,24,${0.85 * a})`; ctx.shadowBlur = 12 * a;
-        ctx.fillStyle = `rgba(255,${t > 1550 && t < 1680 ? 160 : 70},${t > 1550 && t < 1680 ? 160 : 80},${a})`;
-        ctx.beginPath(); ctx.arc(cx, cy, cell * 0.32, 0, 7); ctx.fill();
-        ctx.shadowBlur = 0;
-      });
-      count.textContent = String(Math.min(100, Math.round((t / 1600) * 100))).padStart(3, '0');
-      if (t < total) requestAnimationFrame(draw);
-      else { wrap.classList.add('done'); done(); setTimeout(() => wrap.remove(), 1300); }
+    const count = $('.preloader__count', wrap), frame = $('.preloader__frame', wrap);
+    const letters = $$('.pl > span', wrap);
+    const ease = (x) => 1 - Math.pow(1 - x, 3);
+    document.body.style.overflow = 'hidden'; // scroll is locked during the intro
+    const t0 = performance.now(), wipeAt = 2800;
+    let finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      document.body.style.overflow = '';
+      done();
+      setTimeout(() => wrap.remove(), 1300);
     };
-    requestAnimationFrame(draw);
+    const tick = (now) => {
+      const t = now - t0;
+      count.textContent = String(Math.round(ease(clamp(t / 1700, 0, 1)) * 100)).padStart(3, '0');
+      frame.style.setProperty('--f', ease(clamp((t - 1500) / 800, 0, 1)).toFixed(3));
+      letters.forEach((l, i) => {
+        const p = ease(clamp((t - 1400 - i * 70) / 600, 0, 1));
+        l.style.transform = `translate3d(0,${((1 - p) * 110).toFixed(1)}%,0)`;
+      });
+      if (t < wipeAt) { requestAnimationFrame(tick); return; }
+      wrap.classList.add('done');
+      finish();
+    };
+    requestAnimationFrame(tick);
   }
 
   /* ---------- Page enter / leave (blur between pages) ---------- */
