@@ -632,6 +632,3 @@ b, strong { font-weight: 600; }
   .plans, .plans--row { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; }
   .plans--row .plan, .plans--row .plan:nth-child(n + 4) { grid-column: auto; }
 }
-
-/* hero: accent words in the headline */
-.hero .accent { color: var(--accent); }
