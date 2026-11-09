@@ -3,98 +3,108 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a0a">
+  <meta name="theme-color" content="#efeeec">
   <title>Privacy Policy | THINGBESIDE</title>
   <meta name="description" content="How THINGBESIDE collects, uses and protects the personal information you share through this website.">
   <meta property="og:title" content="Privacy Policy | THINGBESIDE">
   <meta property="og:description" content="How THINGBESIDE collects, uses and protects the personal information you share through this website.">
   <meta property="og:image" content="assets/work-voltsonelectrical.jpg">
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/styles.css?v=9">
-  <script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('tb-loaded'))document.documentElement.classList.add('no-preload')}catch(e){}</script>
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css?v=29">
+  <script>document.documentElement.classList.add('js');try{if(sessionStorage.getItem('tb-loaded'))document.documentElement.classList.add('no-preload')}catch(e){}setTimeout(function(){var p=document.querySelector('.page');p&&p.classList.remove('entering')},5000)</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<canvas id="fluid" aria-hidden="true"></canvas>
 
 <header class="nav">
   <a class="wordmark" href="index.html" aria-label="THINGBESIDE home">THINGBESIDE</a>
-  <nav aria-label="Main"><ul class="nav__pill"><li><a href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V20h-5v-6H9v6H4z"/></svg>Home</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
+  <nav aria-label="Main"><ul class="nav__links"><li><a href="work.html">Work<sup class=nav__count>4</sup></a></li><li><a href="services.html">Services</a></li><li><a href="services.html#pricing">Pricing</a></li><li><a href="index.html#about">About</a></li><li><a href="contact.html">Contact</a></li></ul></nav>
   <div class="nav__end">
-    <a class="btn btn--sm" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="btn btn--sm nav__cta" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
   </div>
 </header>
 <div class="mobile-menu" id="mobile-menu">
-  <a class="big" href="index.html">Home</a>
-  <a class="big" href="work.html">Work</a>
-  <a class="big" href="services.html">Services</a>
-  <a class="big" href="contact.html">Contact</a>
-  <a class="btn" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  <nav class="mm__links" aria-label="Mobile">
+    <a class="mm__link" href="index.html">Home</a>
+    <a class="mm__link" href="work.html">Work</a>
+    <a class="mm__link" href="services.html">Services</a>
+    <a class="mm__link" href="services.html#pricing">Pricing</a>
+    <a class="mm__link" href="index.html#about">About</a>
+    <a class="mm__link" href="contact.html">Contact</a>
+  </nav>
+  <div class="mm__foot">
+    <a class="btn btn--light" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+    <a href="mailto:thingbeside@gmail.com">thingbeside@gmail.com</a>
+  </div>
 </div>
 
 <div class="page entering">
+<div class="topbar"><a href="contact.html"><i class="dot" aria-hidden="true"></i><span>Taking new projects</span><span class="topbar__sep" aria-hidden="true">·</span><span class="topbar__more">Book a free 15-minute call</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
 <main id="main">
-  <section class="page-hero">
-    <div class="wrap head">
-      <span class="eyebrow reveal">Legal</span>
-      <h1 data-split data-load data-kinetic>Privacy policy</h1>
-      <p class="sub" data-split data-load>How THINGBESIDE collects, uses and looks after your personal information.</p>
+  <section class="phero">
+    <div class="wrap">
+      <p class="label reveal">Legal</p>
+      <h1 class="display" data-split data-load>Privacy policy</h1>
+      <div class="phero__foot">
+        <p class="phero__sub reveal">How THINGBESIDE collects, uses and looks after your personal information.</p>
+      </div>
     </div>
   </section>
 
   <section class="section" style="padding-top:0">
-    <div class="prose reveal">
-      <p><em>Template for review. Have this checked against the Australian Privacy Principles before launch.</em></p>
-      <h2>What I collect</h2>
-      <p>When you use the contact form or book a call, I collect your name, email address and anything you choose to tell me about your business.</p>
-      <h2>How I use it</h2>
-      <p>Only to reply to your enquiry, prepare a quote and deliver your project. I don’t sell or share your details with anyone for marketing.</p>
-      <h2>Storage</h2>
-      <p>Form submissions are handled by Framer and stored securely. Project files are kept only as long as needed to support your website.</p>
-      <h2>Your choices</h2>
-      <p>You can ask to see, correct or delete the information I hold about you at any time by emailing <a href="mailto:thingbeside@gmail.com">thingbeside@gmail.com</a>.</p>
+    <div class="wrap">
+      <div class="prose reveal">
+        <p><em>Template for review. Have this checked against the Australian Privacy Principles before launch.</em></p>
+        <h2>What I collect</h2>
+        <p>When you use the contact form or book a call, I collect your name, email address and anything you choose to tell me about your business.</p>
+        <h2>How I use it</h2>
+        <p>Only to reply to your enquiry, prepare a quote and deliver your project. I don’t sell or share your details with anyone for marketing.</p>
+        <h2>Storage</h2>
+        <p>Form submissions are handled by Formspree and stored securely. Project files are kept only as long as needed to support your website.</p>
+        <h2>Your choices</h2>
+        <p>You can ask to see, correct or delete the information I hold about you at any time by emailing <a href="mailto:thingbeside@gmail.com">thingbeside@gmail.com</a>.</p>
+      </div>
     </div>
   </section>
 
   <!-- FINAL CTA -->
-  <section class="cta" aria-labelledby="cta-title">
-    <div class="cta__card">
-      <div class="cta__glow" aria-hidden="true"></div>
-      <h2 id="cta-title" data-split data-kinetic>Ready for a website that works?</h2>
-      <p class="sub reveal">Book a free 15-minute call. Tell me about your business, and I’ll tell you how I’d build your site.</p>
-      <div class="reveal"><a class="btn" href="contact.html"><span class="btn__label"><span>Get in touch</span><span aria-hidden="true">Get in touch</span></span><span class="btn__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+  <section class="outro" aria-labelledby="cta-title">
+    <h2 id="cta-title" class="outro__line" data-wave>Ready for a website that works?</h2>
+    <div class="wrap outro__foot">
+      <p class="outro__sub reveal">Book a free 15-minute call. Tell me about your business, and I’ll tell you how I’d build your site.</p>
+      <div class="reveal"><a class="btn" href="contact.html"><span class="btn__label"><span>Book a free call</span><span aria-hidden="true">Book a free call</span></span><span class="btn__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a></div>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <div class="wrap">
+  <div class="footer__panel">
     <div class="footer__top">
-      <div>
-        <a class="wordmark" href="index.html">THINGBESIDE</a>
-        <p>AI-powered efficiency, hand-crafted design. Your new site live in weeks, ready to win customers.</p>
+      <div class="footer__lead">
+        <h2 class="footer__title">Start with a free <span class="nowrap">15-minute</span> call</h2>
+        <a class="footer__mail" href="mailto:thingbeside@gmail.com"><span>thingbeside@gmail.com</span><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></i></a>
+        <p class="footer__small">Replies within 24 hours. Based in Brisbane, working with Australia &amp; worldwide.</p>
       </div>
-      <div>
-        <h4>Pages</h4>
+      <nav class="footer__cols" aria-label="Footer">
         <ul><li><a href="index.html">Home</a></li><li><a href="work.html">Work</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <ul><li><a href="mailto:thingbeside@gmail.com">thingbeside@gmail.com</a></li><li><a href="contact.html">Book a free call</a></li><li>Brisbane, QLD</li></ul>
-      </div>
+        <ul><li><a href="index.html#work">Featured work</a></li><li><a href="index.html#process">Process</a></li><li><a href="services.html#pricing">Pricing</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#faq">FAQ</a></li></ul>
+        <ul><li><a href="mailto:thingbeside@gmail.com">Email me</a></li><li><a href="contact.html">Book a free call</a></li><li><a href="privacy.html">Privacy policy</a></li></ul>
+      </nav>
     </div>
     <div class="footer__mark" aria-hidden="true"><span>THINGBESIDE</span></div>
     <div class="footer__legal">
       <span>© <span data-year>2026</span> THINGBESIDE · ABN 00 000 000 000</span>
-      <a href="privacy.html">Privacy policy</a>
+      <span>Designed by hand in Brisbane, QLD</span>
     </div>
   </div>
 </footer>
 </div>
 
-<script src="assets/main.js?v=9"></script>
+<script src="assets/main.js?v=29"></script>
 </body>
 </html>
