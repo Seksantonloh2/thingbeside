@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 51  # bump to make browsers fetch fresh styles.css and main.js
+V = 52  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -116,6 +116,7 @@ def head(title, desc, extra=''):
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <style>.preloader{{visibility:hidden}}</style>
   <link rel="stylesheet" href="assets/styles.css?v={V}">
   <script>document.documentElement.classList.add('js');try{{if(sessionStorage.getItem('tb-loaded'))document.documentElement.classList.add('no-preload')}}catch(e){{}}setTimeout(function(){{var p=document.querySelector('.page');p&&p.classList.remove('entering')}},5000)</script>
 {extra}</head>
