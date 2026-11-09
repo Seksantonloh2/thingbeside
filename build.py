@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 52  # bump to make browsers fetch fresh styles.css and main.js
+V = 53  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -182,8 +182,11 @@ FOOTER = f'''<footer class="footer">
 '''
 
 def page(file, title, desc, body, current=None, extra_head='', preloader=False, dark_top=False):
-    letters = ''.join(f'<span class="pl"><span>{c}</span></span>' for c in 'THINGBESIDE')
-    pre = (f'<div class="preloader" aria-hidden="true">\n  <div class="preloader__frame"><video class="preloader__video" autoplay muted loop playsinline poster="assets/hero-bg.jpg" aria-hidden="true"><source src="assets/hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 760px)"><source src="assets/hero-bg.mp4" type="video/mp4"></video></div>\n  <p class="preloader__word">{letters}</p>\n  <div class="preloader__count">000</div>\n</div>\n'
+    strips = ''.join(f'<span class="pp__strip" style="--d:{d}"></span>' for d in ['0ms', '360ms', '120ms', '240ms'])
+    words = ''.join(f'<span class="pp__word">{w}</span>' for w in ['Design', 'Build', 'Launch', 'Grow'])
+    pre = (f'<div class="preloader" aria-hidden="true">\n  <div class="pp__strips">{strips}</div>\n'
+           f'  <div class="pp__text"><span class="pp__label">THINGBESIDE</span>'
+           f'<span class="pp__ticker"><span class="pp__words">{words}</span></span></div>\n</div>\n'
            if preloader else '')
     html = (head(title, desc, extra_head) + '<body>\n' + pre + nav(current, dark_top)
             + '<div class="page entering">\n' + TOPBAR + '<main id="main">\n' + body + '</main>\n\n' + FOOTER)

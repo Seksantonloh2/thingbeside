@@ -72,38 +72,26 @@
     requestAnimationFrame(tick);
   }
 
-  /* ---------- Intro preloader: 0-100 counter, letters rise, hero frame expands, overlay wipes away ---------- */
+  /* ---------- Intro preloader (PreloadPro style): 4 strips, a label and a word ticker, strips peel away ---------- */
   function preloader(done) {
     const wrap = $('.preloader');
     if (!wrap || root.classList.contains('no-preload') || reduce) { wrap && wrap.remove(); done(); return; }
     store.set('tb-loaded', '1');
     wrap.style.visibility = 'visible'; // shown only once the intro starts
-    const count = $('.preloader__count', wrap), frame = $('.preloader__frame', wrap);
-    const letters = $$('.pl > span', wrap);
-    const ease = (x) => 1 - Math.pow(1 - x, 3);
+    const list = $('.pp__words', wrap), text = $('.pp__text', wrap), strips = $$('.pp__strip', wrap);
+    const n = $$('.pp__word', wrap).length, STEP = 440, HOLD = 320;
     document.body.style.overflow = 'hidden'; // scroll is locked during the intro
-    const t0 = performance.now(), wipeAt = 2800;
-    let finished = false;
-    const finish = () => {
-      if (finished) return;
-      finished = true;
-      document.body.style.overflow = '';
+    let i = 0;
+    const show = () => { list.style.transform = `translate3d(0,${-i * 1.2}em,0)`; };
+    show();
+    const ticker = setInterval(() => { i = Math.min(n - 1, i + 1); show(); if (i === n - 1) clearInterval(ticker); }, STEP);
+    setTimeout(() => {
+      text.classList.add('is-out');
+      strips.forEach((s) => s.classList.add('is-out'));
       done();
-      setTimeout(() => wrap.remove(), 1300);
-    };
-    const tick = (now) => {
-      const t = now - t0;
-      count.textContent = String(Math.round(ease(clamp(t / 1700, 0, 1)) * 100)).padStart(3, '0');
-      frame.style.setProperty('--f', ease(clamp((t - 1500) / 800, 0, 1)).toFixed(3));
-      letters.forEach((l, i) => {
-        const p = ease(clamp((t - 1400 - i * 70) / 600, 0, 1));
-        l.style.transform = `translate3d(0,${((1 - p) * 110).toFixed(1)}%,0)`;
-      });
-      if (t < wipeAt) { requestAnimationFrame(tick); return; }
-      wrap.classList.add('done');
-      finish();
-    };
-    requestAnimationFrame(tick);
+      document.body.style.overflow = '';
+    }, STEP * (n - 1) + HOLD);
+    setTimeout(() => wrap.remove(), STEP * (n - 1) + HOLD + 1600);
   }
 
   /* ---------- Page enter / leave (blur between pages) ---------- */
