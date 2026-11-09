@@ -135,6 +135,7 @@
     setTimeout(() => $$('.hero .reveal, .phero .reveal').forEach((el) => el.classList.add('is-in')), 500);
     watch();
     requestScroll();
+    heroParticles();
   }
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href]');
@@ -377,6 +378,114 @@
 
   /* ---------- Footer year ---------- */
   $$('[data-year]').forEach((el) => { el.textContent = new Date().getFullYear(); });
+
+  /* ---------- Hero particle image: the background photo as particles the cursor scatters ---------- */
+  let particlesStarted = false;
+  function heroParticles() {
+    const card = $('.hero__card'), canvas = $('.hero__particles');
+    if (particlesStarted || !card || !canvas || reduce) return;
+    particlesStarted = true;
+    const m = getComputedStyle(card).backgroundImage.match(/url\(["']?(.*?)["']?\)/);
+    if (!m) return;
+    const img = new Image();
+    img.decoding = 'async';
+    img.src = m[1];
+    const ctx = canvas.getContext('2d', { alpha: false });
+    const BG = 0xff121211; // #111212 as little-endian ABGR
+    let W = 0, H = 0, step = 6, dot = 5, n = 0;
+    let hx, hy, x, y, vx, vy, z, col, buf, data;
+    const ptr = { x: -9999, y: -9999, on: false, moved: 0 };
+    let running = false, visible = true, quiet = 0;
+
+    const build = () => {
+      const r = card.getBoundingClientRect();
+      W = Math.max(1, Math.round(r.width)); H = Math.max(1, Math.round(r.height));
+      canvas.width = W; canvas.height = H;
+      step = 3; dot = 3; // small, gap-free particles show more of the photo
+      // draw the photo exactly like the CSS background (cover + background-position)
+      const off = document.createElement('canvas'); off.width = W; off.height = H;
+      const o = off.getContext('2d');
+      const pos = getComputedStyle(card).backgroundPosition.split(' ').map((v) => (v.endsWith('%') ? parseFloat(v) / 100 : 0.5));
+      const s = Math.max(W / img.naturalWidth, H / img.naturalHeight);
+      const dw = img.naturalWidth * s, dh = img.naturalHeight * s;
+      o.drawImage(img, (W - dw) * (pos[0] ?? 0.5), (H - dh) * (pos[1] ?? 0.5), dw, dh);
+      const px = o.getImageData(0, 0, W, H).data;
+      const cols = Math.ceil(W / step), rows = Math.ceil(H / step);
+      n = cols * rows;
+      hx = new Float32Array(n); hy = new Float32Array(n); x = new Float32Array(n); y = new Float32Array(n);
+      vx = new Float32Array(n); vy = new Float32Array(n); z = new Float32Array(n); col = new Uint32Array(n);
+      let i = 0;
+      for (let r2 = 0; r2 < rows; r2++) for (let c = 0; c < cols; c++, i++) {
+        const sx = Math.min(W - 1, c * step + (step >> 1)), sy = Math.min(H - 1, r2 * step + (step >> 1));
+        const k = (sy * W + sx) * 4;
+        col[i] = (255 << 24) | (px[k + 2] << 16) | (px[k + 1] << 8) | px[k];
+        hx[i] = c * step; hy[i] = r2 * step;
+        // entrance: particles start scattered and assemble into the photo
+        const a = Math.random() * Math.PI * 2, d = 60 + Math.random() * 260;
+        x[i] = hx[i] + Math.cos(a) * d; y[i] = hy[i] + Math.sin(a) * d; z[i] = Math.random() * 0.8;
+      }
+      data = ctx.createImageData(W, H); buf = new Uint32Array(data.data.buffer);
+      card.classList.add('has-particles');
+      wake();
+    };
+
+    const frame = () => {
+      if (!running) return;
+      const R = W < 760 ? 70 : 110, R2 = R * R, force = 7, spring = 0.075, friction = 0.8;
+      buf.fill(BG);
+      let energy = 0;
+      const hot = ptr.on;
+      for (let i = 0; i < n; i++) {
+        let px = x[i], py = y[i];
+        if (hot) {
+          const dx = px - ptr.x, dy = py - ptr.y, d2 = dx * dx + dy * dy;
+          if (d2 < R2) {
+            const d = Math.sqrt(d2) || 1, f = (1 - d / R) * force;
+            vx[i] += (dx / d) * f; vy[i] += (dy / d) * f;
+            z[i] = Math.min(1.4, z[i] + f * 0.06); // depth bounce towards the viewer
+          }
+        }
+        vx[i] = (vx[i] + (hx[i] - px) * spring) * friction;
+        vy[i] = (vy[i] + (hy[i] - py) * spring) * friction;
+        px += vx[i]; py += vy[i]; x[i] = px; y[i] = py;
+        z[i] *= 0.9;
+        energy += Math.abs(vx[i]) + Math.abs(vy[i]) + z[i];
+        // draw a square particle (bigger when bounced towards the viewer)
+        const sz = Math.max(1, Math.round(dot * (1 + z[i])));
+        const ix = Math.round(px), iy = Math.round(py);
+        if (ix >= W || iy >= H || ix + sz <= 0 || iy + sz <= 0) continue;
+        const x0 = ix < 0 ? 0 : ix, x1 = Math.min(W, ix + sz), y1 = Math.min(H, iy + sz);
+        const c = col[i];
+        for (let yy = iy < 0 ? 0 : iy; yy < y1; yy++) { let p = yy * W + x0; const e = yy * W + x1; while (p < e) buf[p++] = c; }
+      }
+      ctx.putImageData(data, 0, 0);
+      // sleep once everything has settled and the pointer is still
+      quiet = energy < n * 0.002 && performance.now() - ptr.moved > 300 ? quiet + 1 : 0;
+      if (quiet > 20 || !visible) { running = false; return; }
+      requestAnimationFrame(frame);
+    };
+    const wake = () => { if (!running && visible && n) { running = true; quiet = 0; requestAnimationFrame(frame); } };
+
+    const move = (e) => {
+      const r = card.getBoundingClientRect();
+      ptr.x = e.clientX - r.left; ptr.y = e.clientY - r.top; ptr.on = true; ptr.moved = performance.now();
+      wake();
+    };
+    card.addEventListener('pointermove', move, { passive: true });
+    card.addEventListener('pointerdown', move, { passive: true });
+    card.addEventListener('pointerleave', () => { ptr.on = false; });
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) wake(); }).observe(card);
+    let rt;
+    addEventListener('resize', () => {
+      clearTimeout(rt);
+      rt = setTimeout(() => {
+        const r = card.getBoundingClientRect();
+        if (Math.round(r.width) !== W || Math.round(r.height) !== H) build();
+      }, 200);
+    });
+    const ready = img.decode ? img.decode() : new Promise((res, rej) => { img.onload = res; img.onerror = rej; });
+    ready.then(build, () => {});
+  }
 
   /* ---------- Boot ---------- */
   runScroll();

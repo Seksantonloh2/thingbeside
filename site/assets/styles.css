@@ -199,7 +199,9 @@ b, strong { font-weight: 600; }
   min-height: min(88svh, 880px); border-radius: var(--r); color: var(--on-dark);
   background: var(--dark) url('hero-bg.jpg') center / cover no-repeat;
 }
-.hero__card::before { content: ''; position: absolute; inset: 0; z-index: 0; background: rgba(17, 18, 18, .55); }
+.hero__card::before { content: ''; position: absolute; inset: 0; z-index: 1; background: rgba(17, 18, 18, .55); pointer-events: none; }
+.hero__particles { position: absolute; inset: 0; z-index: 0; display: block; width: 100%; height: 100%; }
+.hero__card.has-particles { background-image: none; }
 .hero__content {
   position: relative; z-index: 2; display: flex; flex-direction: column; align-items: flex-start; text-align: left;
   padding: calc(var(--nav-h) + clamp(40px, 9vh, 120px)) clamp(24px, 4vw, 64px) clamp(40px, 6vw, 96px);
@@ -630,3 +632,6 @@ b, strong { font-weight: 600; }
   .plans, .plans--row { grid-template-columns: 1fr; max-width: 640px; margin-inline: auto; }
   .plans--row .plan, .plans--row .plan:nth-child(n + 4) { grid-column: auto; }
 }
+
+/* hero: accent words in the headline */
+.hero .accent { color: var(--accent); }
