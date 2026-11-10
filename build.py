@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 53  # bump to make browsers fetch fresh styles.css and main.js
+V = 54  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -55,19 +55,19 @@ CASES = [
 
 # (label, title, image, alt, description, what's included)
 SERVICES = [
-    ('Design', 'Website design', U('1586717791821-3f44a563fa4c', 1000), 'Designer sketching website wireframes on a tablet',
+    ('Design', 'Website design', 'assets/service-design.webp', 'Website design: modern, user-focused and built to convert',
      'A custom design built around your business and your customers. You see the homepage first, then I roll the look across every page.',
      ['Homepage-first, so you see the direction early', 'Copy written or polished for you', '2 rounds of revisions included']),
-    ('Development', 'Framer development', 'assets/service-framer.webp', 'Website layout being designed on a large monitor',
+    ('Development', 'Framer development', 'assets/service-framer.webp', 'Framer editor building a website layout',
      'Fast, secure and smooth to use, with animations that make you look established on every screen size.',
      ['Mobile-first, responsive layouts', 'Forms that land in your inbox', 'A private preview link before launch']),
     ('Launch &amp; SEO', 'Launch &amp; SEO', 'assets/service-launch.webp', 'Website launch and SEO score dashboard',
      'Your site goes live properly set up, so Google can find it and customers searching in your area can find you.',
      ['Domain connected and site published', 'Titles and descriptions on every page', 'Speed, alt text and accessibility checks']),
-    ('Care', 'Care &amp; updates', U('1512941937669-90a1b58e7e9c', 1000), 'Smartphone on a desk showing app icons',
+    ('Care', 'Care &amp; updates', 'assets/service-care.webp', 'Care and updates: security, performance and up-to-date sites',
      'A site you can update yourself. Change text and photos in minutes, or hand the bigger jobs to me.',
      ['A walkthrough on editing at handover', '14 days of free support after launch', 'Bigger changes at $75/hour']),
-    ('One page', 'One-page websites', 'assets/work-fernmoorphysiotherapy.jpg', 'Fernmoor Physiotherapy website homepage',
+    ('One page', 'One-page websites', 'assets/service-onepage.webp', 'One-page website: a single focused page built to convert',
      'A single, focused page built to turn visitors into enquiries. Ideal for new businesses, promotions or capturing leads fast.',
      ['One scrolling page, built to convert', 'Enquiry form to your inbox', 'Live within a week']),
     ('Rebuilds', 'Website rebuilds', 'assets/work-northbridgeconsulting.jpg', 'Northbridge Consulting website homepage',
@@ -312,7 +312,7 @@ SERVICES_LIST = f'''  <!-- SERVICES -->
   <section class="section svc" id="services" aria-labelledby="svc-title">
     <div class="wrap">
       <div class="sec-head">
-        <h2 id="svc-title" class="h-xl" data-split>My {pic(U('1586717791821-3f44a563fa4c', 300))} services</h2>
+        <h2 id="svc-title" class="h-xl" data-split>My {pic('assets/service-design.webp')} services</h2>
         <div class="reveal">{btn('All services', 'services.html', 'btn btn--white btn--sm')}</div>
       </div>
       <ul class="svc-list" data-stagger>
