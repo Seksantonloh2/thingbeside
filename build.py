@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 52  # bump to make browsers fetch fresh styles.css and main.js
+V = 53  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -61,7 +61,7 @@ SERVICES = [
     ('Development', 'Framer development', 'assets/service-framer.webp', 'Website layout being designed on a large monitor',
      'Fast, secure and smooth to use, with animations that make you look established on every screen size.',
      ['Mobile-first, responsive layouts', 'Forms that land in your inbox', 'A private preview link before launch']),
-    ('Launch &amp; SEO', 'Launch &amp; SEO', U('1460925895917-afdab827c52f', 1000), 'Laptop showing website analytics charts',
+    ('Launch &amp; SEO', 'Launch &amp; SEO', 'assets/service-launch.webp', 'Website launch and SEO score dashboard',
      'Your site goes live properly set up, so Google can find it and customers searching in your area can find you.',
      ['Domain connected and site published', 'Titles and descriptions on every page', 'Speed, alt text and accessibility checks']),
     ('Care', 'Care &amp; updates', U('1512941937669-90a1b58e7e9c', 1000), 'Smartphone on a desk showing app icons',
