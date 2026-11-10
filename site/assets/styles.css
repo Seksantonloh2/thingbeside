@@ -145,7 +145,7 @@ b, strong { font-weight: 600; }
   position: fixed; z-index: 60; left: var(--inset); right: var(--inset);
   top: calc(var(--inset) * 2 + var(--topbar)); height: var(--nav-h);
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px;
-  padding-inline: var(--pad); border-radius: var(--r-sm); color: var(--ink);
+  padding-inline: var(--pad); border-radius: var(--pill); color: var(--ink);
   transition: top .5s var(--ease), height .5s var(--ease), background-color .4s, color .4s, transform .2s var(--ease);
 }
 .nav.is-solid { top: var(--inset); height: 64px; background: var(--surface); }
