@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 50  # bump to make browsers fetch fresh styles.css and main.js
+V = 51  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -66,7 +66,7 @@ SERVICES = [
      ['Domain connected and site published', 'Titles and descriptions on every page', 'Speed, alt text and accessibility checks']),
     ('Care', 'Care &amp; updates', U('1512941937669-90a1b58e7e9c', 1000), 'Smartphone on a desk showing app icons',
      'A site you can update yourself. Change text and photos in minutes, or hand the bigger jobs to me.',
-     ['A walkthrough on editing at handover', '14 days of free support after launch', 'Bigger changes at $90/hour']),
+     ['A walkthrough on editing at handover', '14 days of free support after launch', 'Bigger changes at $75/hour']),
     ('One page', 'One-page websites', 'assets/work-fernmoorphysiotherapy.jpg', 'Fernmoor Physiotherapy website homepage',
      'A single, focused page built to turn visitors into enquiries. Ideal for new businesses, promotions or capturing leads fast.',
      ['One scrolling page, built to convert', 'Enquiry form to your inbox', 'Live within a week']),
@@ -246,7 +246,7 @@ TRADES_STRIP = f'''  <!-- WHO IT'S FOR -->
 
 '''
 
-STATS = [('3', ' weeks', 'Typical time from first call to launch'), ('590', '', 'Starting price in AUD, fixed quote', '$'),
+STATS = [('3', ' weeks', 'Typical time from first call to launch'), ('390', '', 'Starting price in AUD, fixed quote', '$'),
          ('14', ' days', 'Free support after your site goes live'), ('24', ' hrs', 'Reply time on every enquiry')]
 
 def stat(n, suf, label, pre=''):
@@ -378,21 +378,21 @@ def plan(for_, name, desc, price, suffix, note, items, pop=False, wide=False):
 
 PLANS_MAIN = (
     plan('For new businesses', 'One-Page Website', 'A single, focused page built to turn visitors into enquiries. Ideal for new businesses, promotions or capturing leads fast.',
-         590, 'AUD', 'One-off fee · live within a week',
+         390, 'AUD', 'One-off fee · live within a week',
          ['One focused, scrolling page', 'Mobile-first custom design', 'Enquiry form to your inbox', 'SEO basics and domain setup', '14 days of free support'])
     + plan('For growing businesses', 'Business Website', 'A 5–10 page website designed around your business, not a template. Mobile-first, fast-loading and ready for Google.',
-           1990, 'AUD', 'One-off fee · most sites live in about 3 weeks',
+           1290, 'AUD', 'One-off fee · most sites live in about 3 weeks',
            ['5–10 custom-designed pages', 'Mobile-first and fast-loading', 'SEO essentials on every page', '2 rounds of design revisions', 'Edit it yourself in Framer', '14 days of free support'], pop=True)
     + plan('For businesses with plenty to say', 'Large Website', 'A bigger, well-structured site with more pages and content, organised so visitors find what they need easily.',
-           3490, 'AUD', 'One-off fee · fixed quote after a free call',
+           2490, 'AUD', 'One-off fee · fixed quote after a free call',
            ['10+ pages and sections', 'Clear structure and navigation', 'Blog or CMS collections', 'SEO essentials on every page', '14 days of free support'])
 )
 PLANS_EXTRA = (
     plan('For slow or clunky sites', 'Website Rebuild', 'Stuck with a slow, clunky or hard-to-manage website? I’ll rebuild it in Framer and move your content across.',
-         1490, 'AUD', 'One-off fee · keep your Google rankings',
+         990, 'AUD', 'One-off fee · keep your Google rankings',
          ['Rebuilt in Framer from scratch', 'Content moved across for you', 'Redirects set up for old pages', 'Faster, easier to manage'], wide=True)
     + plan('For live websites', 'Updates &amp; Changes', 'Simple text and image edits are yours to make in Framer’s easy editor. For bigger changes, I’m here to help.',
-           90, '/hour', 'Pay only for the time used · most updates take under two hours',
+           75, '/hour', 'Pay only for the time used · most updates take under two hours',
            ['New pages and sections', 'Seasonal and promo updates', 'Layout and design tweaks', 'Group changes to save money'], wide=True)
 )
 
@@ -470,7 +470,7 @@ OUTRO = f'''  <!-- FINAL CTA -->
 '''
 
 SCHEMA = f'''  <script type="application/ld+json">
-  {{"@context":"https://schema.org","@type":"ProfessionalService","name":"THINGBESIDE","description":"Website design and Framer development for Australian small businesses.","founder":{{"@type":"Person","name":"Seksan Tonloh"}},"areaServed":["Brisbane","Australia","Worldwide"],"address":{{"@type":"PostalAddress","addressLocality":"Brisbane","addressRegion":"QLD","addressCountry":"AU"}},"email":"{EMAIL}","priceRange":"From AUD 590"}}
+  {{"@context":"https://schema.org","@type":"ProfessionalService","name":"THINGBESIDE","description":"Website design and Framer development for Australian small businesses.","founder":{{"@type":"Person","name":"Seksan Tonloh"}},"areaServed":["Brisbane","Australia","Worldwide"],"address":{{"@type":"PostalAddress","addressLocality":"Brisbane","addressRegion":"QLD","addressCountry":"AU"}},"email":"{EMAIL}","priceRange":"From AUD 390"}}
   </script>
 '''
 
@@ -514,7 +514,7 @@ def srow(i, s):
 '''
 
 page('services.html', 'Services | Website Design &amp; Framer Development',
-     'Website design, Framer development, launch and SEO basics, and ongoing care. Clear AUD pricing from $590 with no hidden fees.',
+     'Website design, Framer development, launch and SEO basics, and ongoing care. Clear AUD pricing from $390 with no hidden fees.',
      page_hero('Services', f'Everything {pic(U("1559028012-481c04fa702d", 300))} you need',
                'From design to launch, I handle your whole website so you can get back to running your business.',
                f'        <div class="reveal">{btn("See pricing", "#pricing", "btn btn--white btn--sm")}</div>\n')
