@@ -142,13 +142,13 @@ b, strong { font-weight: 600; }
 @keyframes ping { 0% { transform: scale(1); opacity: .6; } 80%, 100% { transform: scale(2.8); opacity: 0; } }
 
 .nav {
-  position: fixed; z-index: 60; left: var(--inset); right: var(--inset);
-  top: calc(var(--inset) * 2 + var(--topbar)); height: var(--nav-h);
+  position: fixed; z-index: 60; left: 12px; right: 12px;
+  top: calc(var(--inset) + var(--topbar) + 12px); height: var(--nav-h);
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 24px;
   padding-inline: var(--pad); border-radius: var(--pill); color: var(--ink);
   transition: top .5s var(--ease), height .5s var(--ease), background-color .4s, color .4s, transform .2s var(--ease);
 }
-.nav.is-solid { top: var(--inset); height: 64px; background: var(--surface); }
+.nav.is-solid { top: 12px; height: 64px; background: var(--surface); }
 .nav--over-dark:not(.is-solid) { color: var(--on-dark); }
 .nav--over-dark:not(.is-solid) .nav__cta { --b-bg: #fff; --b-fg: var(--ink); }
 .nav.is-hidden { transform: translateY(calc(-100% - 40px)); }
