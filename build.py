@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 51  # bump to make browsers fetch fresh styles.css and main.js
+V = 52  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -58,7 +58,7 @@ SERVICES = [
     ('Design', 'Website design', U('1586717791821-3f44a563fa4c', 1000), 'Designer sketching website wireframes on a tablet',
      'A custom design built around your business and your customers. You see the homepage first, then I roll the look across every page.',
      ['Homepage-first, so you see the direction early', 'Copy written or polished for you', '2 rounds of revisions included']),
-    ('Development', 'Framer development', U('1559028012-481c04fa702d', 1000), 'Website layout being designed on a large monitor',
+    ('Development', 'Framer development', 'assets/service-framer.webp', 'Website layout being designed on a large monitor',
      'Fast, secure and smooth to use, with animations that make you look established on every screen size.',
      ['Mobile-first, responsive layouts', 'Forms that land in your inbox', 'A private preview link before launch']),
     ('Launch &amp; SEO', 'Launch &amp; SEO', U('1460925895917-afdab827c52f', 1000), 'Laptop showing website analytics charts',
@@ -515,7 +515,7 @@ def srow(i, s):
 
 page('services.html', 'Services | Website Design &amp; Framer Development',
      'Website design, Framer development, launch and SEO basics, and ongoing care. Clear AUD pricing from $390 with no hidden fees.',
-     page_hero('Services', f'Everything {pic(U("1559028012-481c04fa702d", 300))} you need',
+     page_hero('Services', f'Everything {pic("assets/service-framer.webp")} you need',
                'From design to launch, I handle your whole website so you can get back to running your business.',
                f'        <div class="reveal">{btn("See pricing", "#pricing", "btn btn--white btn--sm")}</div>\n')
      + f'''  <section class="section srows" aria-label="What I do">
