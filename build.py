@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 54  # bump to make browsers fetch fresh styles.css and main.js
+V = 55  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -70,7 +70,7 @@ SERVICES = [
     ('One page', 'One-page websites', 'assets/service-onepage.webp', 'One-page website: a single focused page built to convert',
      'A single, focused page built to turn visitors into enquiries. Ideal for new businesses, promotions or capturing leads fast.',
      ['One scrolling page, built to convert', 'Enquiry form to your inbox', 'Live within a week']),
-    ('Rebuilds', 'Website rebuilds', 'assets/work-northbridgeconsulting.jpg', 'Northbridge Consulting website homepage',
+    ('Rebuilds', 'Website rebuilds', 'assets/service-rebuild.webp', 'Website rebuild: an old site turned into a fast, modern one',
      'Stuck with a slow, clunky or hard-to-manage website? I’ll rebuild it in Framer and move your content across.',
      ['Content moved across for you', 'Redirects set up for old pages', 'Keep your Google rankings']),
 ]
