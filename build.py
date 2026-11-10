@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 55  # bump to make browsers fetch fresh styles.css and main.js
+V = 56  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -169,7 +169,7 @@ FOOTER = f'''<footer class="footer">
     </div>
     <div class="footer__mark" aria-hidden="true"><span>THINGBESIDE</span></div>
     <div class="footer__legal">
-      <span>© <span data-year>2026</span> THINGBESIDE · ABN 00 000 000 000</span>
+      <span>© <span data-year>2026</span> THINGBESIDE</span>
       <span>Designed by hand in Brisbane, QLD</span>
     </div>
   </div>
