@@ -11,7 +11,7 @@ Design: light editorial layout modelled on riseatseven.com. See site/FRAMER-HAND
 from pathlib import Path
 
 OUT = Path(__file__).parent / 'site'
-V = 59  # bump to make browsers fetch fresh styles.css and main.js
+V = 60  # bump to make browsers fetch fresh styles.css and main.js
 
 # ---------------------------------------------------------------- icons
 def svg(paths, sw=1.8, fill='none'):
@@ -210,26 +210,45 @@ def page_hero(label, h1, sub, aside=''):
 ROTATOR = ('<span class="pic pic--rotate" aria-hidden="true">'
            + ''.join(f'<img src="assets/pic-{c[0]}.jpg" alt="">' for c in CASES) + '</span>')
 
-HERO = f'''  <!-- HERO -->
-  <section class="hero" aria-labelledby="hero-title">
+SYNC_PIC = ('<span class="pic pic--sync" aria-hidden="true">'
+            + ''.join(f'<img{" class=\"is-on\"" if i == 0 else ""} src="assets/pic-{c[0]}.jpg" alt="">' for i, c in enumerate(CASES)) + '</span>')
+
+# The 3D hero. assets/hero3d.js draws the scene on the canvas; the video is only loaded if 3D can't run.
+HERO3D_HEAD = f'''  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="assets/hero3d.css?v={V}">
+  <script type="importmap">
+  {{"imports": {{"three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}}}
+  </script>
+  <script type="module" src="assets/hero3d.js?v={V}"></script>
+'''
+
+HERO = f'''  <!-- HERO (3D) -->
+  <section class="hero hero3d" aria-labelledby="hero-title">
     <div class="hero__card">
-      <video class="hero__video is-on" autoplay muted loop playsinline preload="auto" aria-hidden="true">
-        <source src="assets/hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 760px)">
-        <source src="assets/hero-bg.mp4" type="video/mp4">
-      </video>
-      <video class="hero__video" muted playsinline preload="auto" aria-hidden="true">
-        <source src="assets/hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 760px)">
-        <source src="assets/hero-bg.mp4" type="video/mp4">
+      <canvas class="hero3d__canvas" aria-hidden="true"></canvas>
+      <video class="hero__video" muted loop playsinline preload="none" aria-hidden="true">
+        <source data-src="assets/hero-bg-mobile.mp4" type="video/mp4" media="(max-width: 760px)">
+        <source data-src="assets/hero-bg.mp4" type="video/mp4">
       </video>
       <div class="hero__content">
         <p class="hero__eyebrow reveal">Web design studio · Brisbane &amp; worldwide</p>
-        <h1 id="hero-title" class="display" data-split data-load>Modern websites, <br>built in {ROTATOR} days</h1>
+        <h1 id="hero-title" class="display" data-split data-load>Modern websites, <br>built in {SYNC_PIC} days</h1>
         <p class="hero__pitch reveal">Custom websites <b>designed by hand</b> and sped up with AI, so you win customers sooner.</p>
         <div class="hero__cta reveal">
           {btn('Get in touch', cls='btn btn--light')}
           {btn('See my work', 'work.html', 'btn btn--ghost-light')}
         </div>
       </div>
+      <p class="hero3d__hint" aria-hidden="true"><span class="hero3d__hint-fine">It works. Move, click or type.</span><span class="hero3d__hint-touch">It works. Tap to build, drag to spin.</span></p>
+      <a class="hero3d__status" href="{CASES[0][8]}" target="_blank" rel="noopener">
+        <i class="dot" aria-hidden="true"></i>
+        <span class="hero3d__stage">Starting up</span>
+        <span class="hero3d__sep" aria-hidden="true">·</span>
+        <span class="hero3d__name">{CASES[0][1]}</span>
+        {ARROW}
+        <span class="sr-only">(opens the live site in a new tab)</span>
+      </a>
+      <span class="hero3d__tip" aria-hidden="true"></span>
     </div>
   </section>
 
@@ -479,7 +498,7 @@ page('index.html', 'THINGBESIDE | Website Designer in Brisbane',
      'Modern, mobile-first websites for Australian tradies and local businesses. Designed by hand, built in Framer, live in weeks. Book a free 15-minute call.',
      HERO + TRADES_STRIP + INTRO + WORK_HOME + SERVICES_LIST + BIGLINE + deck_section()
      + pricing_section(True) + ABOUT + faq_section() + OUTRO,
-     current='index.html', extra_head=SCHEMA, preloader=True, dark_top=True)
+     current='index.html', extra_head=SCHEMA + HERO3D_HEAD, preloader=True, dark_top=True)
 
 # ---------------------------------------------------------------- WORK
 page('work.html', 'Work | THINGBESIDE Website Designer',
